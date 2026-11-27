@@ -141,6 +141,10 @@
 - (เสนอเพิ่ม) ผสมธีมได้ เช่น ใช้ธีม Minimal ทั้งแอป แต่หน้าปลุกดังใช้ Flip Clock
 - ทุกธีมใช้ได้กับ widget, หน้าปลุกดัง, Night clock และหน้าปัดบน Galaxy Watch
 
+### ไอคอนแอป
+- ไอคอนออกแบบใหม่ (adaptive icon สำหรับ One UI, monochrome สำหรับ themed icons, ไอคอนแจ้งเตือน, ไอคอนนาฬิกา)
+- **เลือกเปลี่ยนไอคอนได้** ใน ตั้งค่า › รูปลักษณ์ › ไอคอนแอป: ค่าเริ่มต้น, Midnight, Daylight, Neon (พร้อมตัวอย่างในรูปทรง One UI)
+
 ### คู่สี (Color palettes)
 - แต่ละธีมมีหลายชุดสี และแต่ละชุดมีทั้ง **light และ dark**
 - ตัวอย่าง Minimal: Mono, Sand, Sage, Ocean, Rose

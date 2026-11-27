@@ -28,6 +28,7 @@ import io.github.tweeter042.alarmclock.core.model.service.SmartHomeController
 import io.github.tweeter042.alarmclock.core.model.service.Speaker
 import io.github.tweeter042.alarmclock.core.model.service.WeatherProvider
 import io.github.tweeter042.alarmclock.core.model.service.WearBridge
+import io.github.tweeter042.alarmclock.core.model.theme.AppIconController
 import kotlinx.coroutines.CoroutineScope
 
 /**
@@ -58,6 +59,10 @@ interface AppGraph {
     val locationAlarms: LocationAlarmRepository
     val backup: BackupManager
     val changelog: ChangelogRepository
+
+    // App shell (:app)
+    /** Launcher icon switching (activity-aliases). */
+    val appIcons: AppIconController
 
     // Engine (core:alarm)
     val engine: AlarmEngine
