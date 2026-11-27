@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Clock -->
+    <string name="ds_am">AM</string>
+    <string name="ds_pm">PM</string>
+    <string name="ds_clock_description">Time %1$s</string>
+    <string name="ds_terminal_prompt" translatable="false" formatted="false">$ date +%R</string>
+
+    <!-- Days of week, ISO order (1 = Monday) -->
+    <string name="ds_day_narrow_1">M</string>
+    <string name="ds_day_narrow_2">T</string>
+    <string name="ds_day_narrow_3">W</string>
+    <string name="ds_day_narrow_4">T</string>
+    <string name="ds_day_narrow_5">F</string>
+    <string name="ds_day_narrow_6">S</string>
+    <string name="ds_day_narrow_7">S</string>
+    <string name="ds_day_full_1">Monday</string>
+    <string name="ds_day_full_2">Tuesday</string>
+    <string name="ds_day_full_3">Wednesday</string>
+    <string name="ds_day_full_4">Thursday</string>
+    <string name="ds_day_full_5">Friday</string>
+    <string name="ds_day_full_6">Saturday</string>
+    <string name="ds_day_full_7">Sunday</string>
+
+    <!-- Common actions and states -->
+    <string name="ds_ok">OK</string>
+    <string name="ds_cancel">Cancel</string>
+    <string name="ds_close">Close</string>
+    <string name="ds_navigate_up">Navigate up</string>
+    <string name="ds_more_options">More options</string>
+    <string name="ds_selected">Selected</string>
+    <string name="ds_not_selected">Not selected</string>
+    <string name="ds_on">On</string>
+    <string name="ds_off">Off</string>
+    <string name="ds_switch_on">ON</string>
+    <string name="ds_switch_off">OFF</string>
+    <string name="ds_loading">Loading</string>
+    <string name="ds_progress_percent">%1$d%%</string>
+    <string name="ds_badge_overflow">%1$d+</string>
+    <string name="ds_drag_handle">Drag handle</string>
+
+    <!-- Theme gallery -->
+    <string name="ds_theme_preview_description">%1$s theme, %2$s palette, %3$s</string>
+    <string name="ds_mode_light">light</string>
+    <string name="ds_mode_dark">dark</string>
+    <string name="ds_palette_description">%1$s palette</string>
+    <string name="ds_dynamic_colors">Colours from your wallpaper</string>
+
+    <!-- Clock faces -->
+    <string name="ds_face_plain">Digital</string>
+    <string name="ds_face_seven_segment">LCD segments</string>
+    <string name="ds_face_flip">Flip cards</string>
+    <string name="ds_face_analog">Analog hands</string>
+    <string name="ds_face_pixel">Dot matrix</string>
+    <string name="ds_face_terminal">Terminal</string>
+    <string name="ds_face_neon">Neon glow</string>
+    <string name="ds_face_serif">Serif</string>
+
+    <!-- Fonts -->
+    <string name="ds_font_theme_default">Theme font</string>
+    <string name="ds_font_system">System font</string>
+    <string name="ds_font_category_sans">Sans serif</string>
+    <string name="ds_font_category_serif">Serif</string>
+    <string name="ds_font_category_mono">Monospace</string>
+    <string name="ds_font_category_display">Display</string>
+    <string name="ds_font_category_handwriting">Handwriting</string>
+    <string name="ds_font_category_pixel">Pixel</string>
+    <string name="ds_font_import_unreadable">The font file couldn\'t be read.</string>
+    <string name="ds_font_import_too_large">The font file is too large (max 32 MB).</string>
+    <string name="ds_font_import_not_font">This file isn\'t a TrueType or OpenType font.</string>
+    <string name="ds_font_sample">Wake up 07:30 ตื่นนอน</string>
+</resources>

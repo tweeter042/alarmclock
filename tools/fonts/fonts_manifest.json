@@ -1,0 +1,1285 @@
+{
+  "generatedBy": "tools/fonts/download_fonts.py",
+  "totalBytes": 10551028,
+  "families": [
+    {
+      "id": "noto_sans_thai",
+      "family": "Noto Sans Thai",
+      "requestedWeights": [
+        400,
+        700
+      ],
+      "weights": [
+        400,
+        700
+      ],
+      "files": [
+        {
+          "resource": "noto_sans_thai_400",
+          "weight": 400,
+          "bytes": 45660,
+          "sha256": "6c5e4ca047263ed8f07b174be2f7c396d245504ce0f77adc1d26b0978bc95426"
+        },
+        {
+          "resource": "noto_sans_thai_700",
+          "weight": 700,
+          "bytes": 45664,
+          "sha256": "fd475b89dca5b9b2ad5f294944c6c82a1641c29b0a30bc1b771227250fb826a8"
+        }
+      ],
+      "supportsThai": true,
+      "thaiCoverage": 1.0,
+      "latinCoverage": 1.0,
+      "license": "OFL-1.1",
+      "licenseFile": "licenses/fonts/noto_sans_thai.txt"
+    },
+    {
+      "id": "ibm_plex_sans_thai",
+      "family": "IBM Plex Sans Thai",
+      "requestedWeights": [
+        300,
+        400,
+        700
+      ],
+      "weights": [
+        300,
+        400,
+        700
+      ],
+      "files": [
+        {
+          "resource": "ibm_plex_sans_thai_300",
+          "weight": 300,
+          "bytes": 107344,
+          "sha256": "af701c1bd0fc02ebb7a9efadba4187e11a1186684d268972ca0bb63e27e697a8"
+        },
+        {
+          "resource": "ibm_plex_sans_thai_400",
+          "weight": 400,
+          "bytes": 105108,
+          "sha256": "b4b746c92c0fe46a392e6f68b6d1fc98ec124bdd44bfcfb78f4b82d9825a8a08"
+        },
+        {
+          "resource": "ibm_plex_sans_thai_700",
+          "weight": 700,
+          "bytes": 105568,
+          "sha256": "5f9a1bbc18e1ef408ae7e83acc177e0a8b1b68f46d7dd9b15b0c912d0b97c80a"
+        }
+      ],
+      "supportsThai": true,
+      "thaiCoverage": 1.0,
+      "latinCoverage": 1.0,
+      "license": "OFL-1.1",
+      "licenseFile": "licenses/fonts/ibm_plex_sans_thai.txt"
+    },
+    {
+      "id": "ibm_plex_sans_thai_looped",
+      "family": "IBM Plex Sans Thai Looped",
+      "requestedWeights": [
+        400,
+        700
+      ],
+      "weights": [
+        400,
+        700
+      ],
+      "files": [
+        {
+          "resource": "ibm_plex_sans_thai_looped_400",
+          "weight": 400,
+          "bytes": 113684,
+          "sha256": "2b04f65a75d3c253383b3a7f307d433652dfdf9596d3f2bc21cc06844ce1c84b"
+        },
+        {
+          "resource": "ibm_plex_sans_thai_looped_700",
+          "weight": 700,
+          "bytes": 113212,
+          "sha256": "60b2dcfe497d8fc1f5415ddb8bd4e3449e0c772257fafa296a9cfe02c0bd5bd6"
+        }
+      ],
+      "supportsThai": true,
+      "thaiCoverage": 1.0,
+      "latinCoverage": 1.0,
+      "license": "OFL-1.1",
+      "licenseFile": "licenses/fonts/ibm_plex_sans_thai_looped.txt"
+    },
+    {
+      "id": "anuphan",
+      "family": "Anuphan",
+      "requestedWeights": [
+        300,
+        400,
+        700
+      ],
+      "weights": [
+        300,
+        400,
+        700
+      ],
+      "files": [
+        {
+          "resource": "anuphan_300",
+          "weight": 300,
+          "bytes": 110272,
+          "sha256": "a5c179db46c5f3445e48b151f7c2f6f76c268c79e177ab7a8f22886e5ab8bff2"
+        },
+        {
+          "resource": "anuphan_400",
+          "weight": 400,
+          "bytes": 109880,
+          "sha256": "0af05df65b703418b878120c00fbb7bd7a6e712fa8e8b7bab5f206f9b12eb3f8"
+        },
+        {
+          "resource": "anuphan_700",
+          "weight": 700,
+          "bytes": 110112,
+          "sha256": "1a1cec2cc715ecacd707327ff9cf52bc5fd8d129081f35a09eeec53a4085fdc6"
+        }
+      ],
+      "supportsThai": true,
+      "thaiCoverage": 1.0,
+      "latinCoverage": 1.0,
+      "license": "OFL-1.1",
+      "licenseFile": "licenses/fonts/anuphan.txt"
+    },
+    {
+      "id": "bai_jamjuree",
+      "family": "Bai Jamjuree",
+      "requestedWeights": [
+        400,
+        700
+      ],
+      "weights": [
+        400,
+        700
+      ],
+      "files": [
+        {
+          "resource": "bai_jamjuree_400",
+          "weight": 400,
+          "bytes": 78508,
+          "sha256": "32082aa7995d31effad75a3d357026470c0909384b19b7d5267b4c0203f6f725"
+        },
+        {
+          "resource": "bai_jamjuree_700",
+          "weight": 700,
+          "bytes": 78172,
+          "sha256": "6c199ada0d2a0262df7a5902a5272228f0e3adb293294b90f9d7b1896a39461f"
+        }
+      ],
+      "supportsThai": true,
+      "thaiCoverage": 1.0,
+      "latinCoverage": 1.0,
+      "license": "OFL-1.1",
+      "licenseFile": "licenses/fonts/bai_jamjuree.txt"
+    },
+    {
+      "id": "prompt",
+      "family": "Prompt",
+      "requestedWeights": [
+        200,
+        300,
+        400,
+        700
+      ],
+      "weights": [
+        200,
+        300,
+        400,
+        700
+      ],
+      "files": [
+        {
+          "resource": "prompt_200",
+          "weight": 200,
+          "bytes": 147656,
+          "sha256": "3a444139b202117e946881dbb4bcecec48f082efca07fff348dbab9955c063f9"
+        },
+        {
+          "resource": "prompt_300",
+          "weight": 300,
+          "bytes": 146012,
+          "sha256": "f33df88d8ca262755fa589b5829d67e7fe646208601e9574afc183beae69d2ed"
+        },
+        {
+          "resource": "prompt_400",
+          "weight": 400,
+          "bytes": 152988,
+          "sha256": "3a78595458f626e22fe9f800df463c80c1d8f3e69ea1b590754de1a3c3c0dc6c"
+        },
+        {
+          "resource": "prompt_700",
+          "weight": 700,
+          "bytes": 162864,
+          "sha256": "6b96aa4373d100e17521777a3ced50c586c409cab5fb195b0134025cacb9f79b"
+        }
+      ],
+      "supportsThai": true,
+      "thaiCoverage": 1.0,
+      "latinCoverage": 1.0,
+      "license": "OFL-1.1",
+      "licenseFile": "licenses/fonts/prompt.txt"
+    },
+    {
+      "id": "kanit",
+      "family": "Kanit",
+      "requestedWeights": [
+        300,
+        400,
+        700
+      ],
+      "weights": [
+        300,
+        400,
+        700
+      ],
+      "files": [
+        {
+          "resource": "kanit_300",
+          "weight": 300,
+          "bytes": 167016,
+          "sha256": "f9f9e83ea524cc5c5330094876c1e27945eb8edc3fd0320f3fe142da09458655"
+        },
+        {
+          "resource": "kanit_400",
+          "weight": 400,
+          "bytes": 168768,
+          "sha256": "0b101fdc1a77fb29137731819bf164b3e9b4da19b22a7b2295f0e233c53c486d"
+        },
+        {
+          "resource": "kanit_700",
+          "weight": 700,
+          "bytes": 171900,
+          "sha256": "72213d8d3b09dc14036b2efdcdbe12d2cdf0ed6f0389dff55f0c762ddae9104f"
+        }
+      ],
+      "supportsThai": true,
+      "thaiCoverage": 1.0,
+      "latinCoverage": 1.0,
+      "license": "OFL-1.1",
+      "licenseFile": "licenses/fonts/kanit.txt"
+    },
+    {
+      "id": "sarabun",
+      "family": "Sarabun",
+      "requestedWeights": [
+        400,
+        700
+      ],
+      "weights": [
+        400,
+        700
+      ],
+      "files": [
+        {
+          "resource": "sarabun_400",
+          "weight": 400,
+          "bytes": 81516,
+          "sha256": "5c9d6412daf0096c19356366746e0e5af10efe5f93dad67e0f76b38369310ffa"
+        },
+        {
+          "resource": "sarabun_700",
+          "weight": 700,
+          "bytes": 81028,
+          "sha256": "2dae951e530434908390d84bf661be43e8de447fa18426590a7c97b26794a002"
+        }
+      ],
+      "supportsThai": true,
+      "thaiCoverage": 1.0,
+      "latinCoverage": 1.0,
+      "license": "OFL-1.1",
+      "licenseFile": "licenses/fonts/sarabun.txt"
+    },
+    {
+      "id": "mitr",
+      "family": "Mitr",
+      "requestedWeights": [
+        300,
+        400,
+        600
+      ],
+      "weights": [
+        300,
+        400,
+        600
+      ],
+      "files": [
+        {
+          "resource": "mitr_300",
+          "weight": 300,
+          "bytes": 207068,
+          "sha256": "0f9f879830c19c85afdf7f49bfe925d489cc23eaec758e33df4f39bbd83e4339"
+        },
+        {
+          "resource": "mitr_400",
+          "weight": 400,
+          "bytes": 218412,
+          "sha256": "72debf48d3109d30c9a3ded6888004faba19d8ff56faaafd860709cf92e9795c"
+        },
+        {
+          "resource": "mitr_600",
+          "weight": 600,
+          "bytes": 221740,
+          "sha256": "35f3289aec5d59058fe5243abb024d0f8b49539c41f08202db05ee0b07404196"
+        }
+      ],
+      "supportsThai": true,
+      "thaiCoverage": 1.0,
+      "latinCoverage": 1.0,
+      "license": "OFL-1.1",
+      "licenseFile": "licenses/fonts/mitr.txt"
+    },
+    {
+      "id": "chakra_petch",
+      "family": "Chakra Petch",
+      "requestedWeights": [
+        400,
+        700
+      ],
+      "weights": [
+        400,
+        700
+      ],
+      "files": [
+        {
+          "resource": "chakra_petch_400",
+          "weight": 400,
+          "bytes": 70260,
+          "sha256": "a5466b946c7decc8021748dcde8b25b8a5325539a341ba9fb59307815b28da5d"
+        },
+        {
+          "resource": "chakra_petch_700",
+          "weight": 700,
+          "bytes": 70140,
+          "sha256": "c9c2ee076c89bce96fe318e91d1ff06f0b5217175373755adb70365a66d4ec64"
+        }
+      ],
+      "supportsThai": true,
+      "thaiCoverage": 1.0,
+      "latinCoverage": 1.0,
+      "license": "OFL-1.1",
+      "licenseFile": "licenses/fonts/chakra_petch.txt"
+    },
+    {
+      "id": "k2d",
+      "family": "K2D",
+      "requestedWeights": [
+        400,
+        700
+      ],
+      "weights": [
+        400,
+        700
+      ],
+      "files": [
+        {
+          "resource": "k2d_400",
+          "weight": 400,
+          "bytes": 91056,
+          "sha256": "b7112004068d78916969042516fd33a7bbd723d926daa8caef326e6afb2da4ad"
+        },
+        {
+          "resource": "k2d_700",
+          "weight": 700,
+          "bytes": 91580,
+          "sha256": "a15ec499dea4a0997fbafcd556741f9a6bae78acf0121c0d59fb26d60941317a"
+        }
+      ],
+      "supportsThai": true,
+      "thaiCoverage": 1.0,
+      "latinCoverage": 1.0,
+      "license": "OFL-1.1",
+      "licenseFile": "licenses/fonts/k2d.txt"
+    },
+    {
+      "id": "krub",
+      "family": "Krub",
+      "requestedWeights": [
+        400,
+        700
+      ],
+      "weights": [
+        400,
+        700
+      ],
+      "files": [
+        {
+          "resource": "krub_400",
+          "weight": 400,
+          "bytes": 81048,
+          "sha256": "abc6f28418d242e8a6516a98018b432736e853ca134a7f3340c26051a0433d3e"
+        },
+        {
+          "resource": "krub_700",
+          "weight": 700,
+          "bytes": 80816,
+          "sha256": "fe8396fd4bf4819ca04ec6e234becd78edf9c473b5875dfc827263430508d6fe"
+        }
+      ],
+      "supportsThai": true,
+      "thaiCoverage": 1.0,
+      "latinCoverage": 1.0,
+      "license": "OFL-1.1",
+      "licenseFile": "licenses/fonts/krub.txt"
+    },
+    {
+      "id": "niramit",
+      "family": "Niramit",
+      "requestedWeights": [
+        400,
+        700
+      ],
+      "weights": [
+        400,
+        700
+      ],
+      "files": [
+        {
+          "resource": "niramit_400",
+          "weight": 400,
+          "bytes": 89360,
+          "sha256": "1dcbb72a9a378ef64928acda73988d5c6882b9dac9c67a7eaf35aa7c34056e10"
+        },
+        {
+          "resource": "niramit_700",
+          "weight": 700,
+          "bytes": 89456,
+          "sha256": "fcf59cea06f95e776689cc9c7cb4899db3883908fcdb3c138c9c3deec4c94821"
+        }
+      ],
+      "supportsThai": true,
+      "thaiCoverage": 1.0,
+      "latinCoverage": 1.0,
+      "license": "OFL-1.1",
+      "licenseFile": "licenses/fonts/niramit.txt"
+    },
+    {
+      "id": "athiti",
+      "family": "Athiti",
+      "requestedWeights": [
+        400,
+        600
+      ],
+      "weights": [
+        400,
+        600
+      ],
+      "files": [
+        {
+          "resource": "athiti_400",
+          "weight": 400,
+          "bytes": 169392,
+          "sha256": "372f37e03d05569d67ee2290cfd788089933f6e85a191d4eaf02f38ff199622f"
+        },
+        {
+          "resource": "athiti_600",
+          "weight": 600,
+          "bytes": 167584,
+          "sha256": "e51672c8501b8914375d1af02b5b55fecdc001aad79d8510ca68a1eb30cb0981"
+        }
+      ],
+      "supportsThai": true,
+      "thaiCoverage": 1.0,
+      "latinCoverage": 1.0,
+      "license": "OFL-1.1",
+      "licenseFile": "licenses/fonts/athiti.txt"
+    },
+    {
+      "id": "mali",
+      "family": "Mali",
+      "requestedWeights": [
+        400,
+        700
+      ],
+      "weights": [
+        400,
+        700
+      ],
+      "files": [
+        {
+          "resource": "mali_400",
+          "weight": 400,
+          "bytes": 104556,
+          "sha256": "65c0bb03aebbd47f9708a71ec588dde3754dbee055c1f64cbb41b4390fe2dfe3"
+        },
+        {
+          "resource": "mali_700",
+          "weight": 700,
+          "bytes": 104032,
+          "sha256": "db7eeb7fdf5f16e2c0c2466d6bf88af41ab0547207b392de2a764f1f89c8fda2"
+        }
+      ],
+      "supportsThai": true,
+      "thaiCoverage": 1.0,
+      "latinCoverage": 1.0,
+      "license": "OFL-1.1",
+      "licenseFile": "licenses/fonts/mali.txt"
+    },
+    {
+      "id": "itim",
+      "family": "Itim",
+      "requestedWeights": [
+        400
+      ],
+      "weights": [
+        400
+      ],
+      "files": [
+        {
+          "resource": "itim_400",
+          "weight": 400,
+          "bytes": 353128,
+          "sha256": "7d10dad1fb4a5172448458e2b4ec8f73bde34ed02eaef3d67bfc07b0a7482971"
+        }
+      ],
+      "supportsThai": true,
+      "thaiCoverage": 1.0,
+      "latinCoverage": 1.0,
+      "license": "OFL-1.1",
+      "licenseFile": "licenses/fonts/itim.txt"
+    },
+    {
+      "id": "sriracha",
+      "family": "Sriracha",
+      "requestedWeights": [
+        400
+      ],
+      "weights": [
+        400
+      ],
+      "files": [
+        {
+          "resource": "sriracha_400",
+          "weight": 400,
+          "bytes": 308668,
+          "sha256": "1fc41f2d2238e22f30da1ab241d409c7af65f955d09e38aebe3eea19b4e27772"
+        }
+      ],
+      "supportsThai": true,
+      "thaiCoverage": 1.0,
+      "latinCoverage": 1.0,
+      "license": "OFL-1.1",
+      "licenseFile": "licenses/fonts/sriracha.txt"
+    },
+    {
+      "id": "charm",
+      "family": "Charm",
+      "requestedWeights": [
+        400,
+        700
+      ],
+      "weights": [
+        400,
+        700
+      ],
+      "files": [
+        {
+          "resource": "charm_400",
+          "weight": 400,
+          "bytes": 121388,
+          "sha256": "fa91aa72c73445d64f3e8f3bf4b9c64d86041fd4d875cc154b458e72cffe89fd"
+        },
+        {
+          "resource": "charm_700",
+          "weight": 700,
+          "bytes": 122220,
+          "sha256": "75ebbd6a8b692d3257bba668c99316e2ee278d0db74ef624cdc38ae4daa82de3"
+        }
+      ],
+      "supportsThai": true,
+      "thaiCoverage": 1.0,
+      "latinCoverage": 1.0,
+      "license": "OFL-1.1",
+      "licenseFile": "licenses/fonts/charm.txt"
+    },
+    {
+      "id": "pridi",
+      "family": "Pridi",
+      "requestedWeights": [
+        300,
+        400,
+        700
+      ],
+      "weights": [
+        300,
+        400,
+        700
+      ],
+      "files": [
+        {
+          "resource": "pridi_300",
+          "weight": 300,
+          "bytes": 176128,
+          "sha256": "60e7aaa89a881f1b5fa7aaba1e8b733f948b97351948156f6710b38b159256b2"
+        },
+        {
+          "resource": "pridi_400",
+          "weight": 400,
+          "bytes": 187472,
+          "sha256": "fbba53aef0bacf32665da79606036a73ed87814330063e5edb0b35a67089ba4f"
+        },
+        {
+          "resource": "pridi_700",
+          "weight": 700,
+          "bytes": 195568,
+          "sha256": "5138e5f45079984d42ac5f0f8bdea5d15d94d01f5d895c381c950dbd734d98c2"
+        }
+      ],
+      "supportsThai": true,
+      "thaiCoverage": 1.0,
+      "latinCoverage": 1.0,
+      "license": "OFL-1.1",
+      "licenseFile": "licenses/fonts/pridi.txt"
+    },
+    {
+      "id": "taviraj",
+      "family": "Taviraj",
+      "requestedWeights": [
+        400,
+        700
+      ],
+      "weights": [
+        400,
+        700
+      ],
+      "files": [
+        {
+          "resource": "taviraj_400",
+          "weight": 400,
+          "bytes": 204580,
+          "sha256": "6ef143f520e0bc6a4e141e8f0bd7b5a2638804da4162f2613dd50ea56fd5573e"
+        },
+        {
+          "resource": "taviraj_700",
+          "weight": 700,
+          "bytes": 204456,
+          "sha256": "2200bf8b55b1717a390eb04921b6e4f9b1375eea35f553411cde95e3cfd27268"
+        }
+      ],
+      "supportsThai": true,
+      "thaiCoverage": 1.0,
+      "latinCoverage": 1.0,
+      "license": "OFL-1.1",
+      "licenseFile": "licenses/fonts/taviraj.txt"
+    },
+    {
+      "id": "trirong",
+      "family": "Trirong",
+      "requestedWeights": [
+        400,
+        700
+      ],
+      "weights": [
+        400,
+        700
+      ],
+      "files": [
+        {
+          "resource": "trirong_400",
+          "weight": 400,
+          "bytes": 181732,
+          "sha256": "026545f46e4fabaeb54cf06143c459015183ca9c99918e17a10c499f0a35163f"
+        },
+        {
+          "resource": "trirong_700",
+          "weight": 700,
+          "bytes": 185676,
+          "sha256": "c6f440e60af06d7627988f833c03fe92ad7ae5f2cbea3a20c6571439d6a6000d"
+        }
+      ],
+      "supportsThai": true,
+      "thaiCoverage": 1.0,
+      "latinCoverage": 1.0,
+      "license": "OFL-1.1",
+      "licenseFile": "licenses/fonts/trirong.txt"
+    },
+    {
+      "id": "noto_serif_thai",
+      "family": "Noto Serif Thai",
+      "requestedWeights": [
+        400,
+        700
+      ],
+      "weights": [
+        400,
+        700
+      ],
+      "files": [
+        {
+          "resource": "noto_serif_thai_400",
+          "weight": 400,
+          "bytes": 59704,
+          "sha256": "9c577a5f94f8704a3c68442b371176e8ca0041d7df17de3c91f4919289b54fee"
+        },
+        {
+          "resource": "noto_serif_thai_700",
+          "weight": 700,
+          "bytes": 59796,
+          "sha256": "c7cab5c457fa9e5aee02096e97ea47c58538c25d2f7c88254275e78941da0625"
+        }
+      ],
+      "supportsThai": true,
+      "thaiCoverage": 1.0,
+      "latinCoverage": 1.0,
+      "license": "OFL-1.1",
+      "licenseFile": "licenses/fonts/noto_serif_thai.txt"
+    },
+    {
+      "id": "chonburi",
+      "family": "Chonburi",
+      "requestedWeights": [
+        400
+      ],
+      "weights": [
+        400
+      ],
+      "files": [
+        {
+          "resource": "chonburi_400",
+          "weight": 400,
+          "bytes": 165956,
+          "sha256": "d0ef9aaad1141e68b7d2a698fb5614a05ae6dd9b1de88f329108b00da8695f20"
+        }
+      ],
+      "supportsThai": true,
+      "thaiCoverage": 1.0,
+      "latinCoverage": 1.0,
+      "license": "OFL-1.1",
+      "licenseFile": "licenses/fonts/chonburi.txt"
+    },
+    {
+      "id": "pattaya",
+      "family": "Pattaya",
+      "requestedWeights": [
+        400
+      ],
+      "weights": [
+        400
+      ],
+      "files": [
+        {
+          "resource": "pattaya_400",
+          "weight": 400,
+          "bytes": 338272,
+          "sha256": "2552c86f2362c37cbd2c7df1f30c0728695d9e8ebad3d66ac6d3425ed891bd61"
+        }
+      ],
+      "supportsThai": true,
+      "thaiCoverage": 1.0,
+      "latinCoverage": 1.0,
+      "license": "OFL-1.1",
+      "licenseFile": "licenses/fonts/pattaya.txt"
+    },
+    {
+      "id": "inter",
+      "family": "Inter",
+      "requestedWeights": [
+        100,
+        300,
+        400,
+        700
+      ],
+      "weights": [
+        100,
+        300,
+        400,
+        700
+      ],
+      "files": [
+        {
+          "resource": "inter_100",
+          "weight": 100,
+          "bytes": 325028,
+          "sha256": "3428fd01a45310781cfc06d8957c5485de2432132b405ebe6e53efec0719c229"
+        },
+        {
+          "resource": "inter_300",
+          "weight": 300,
+          "bytes": 325748,
+          "sha256": "d0f4bc7faca468376e3db9b5e57afcdc2192134c9ac82a9511f32767b56853a4"
+        },
+        {
+          "resource": "inter_400",
+          "weight": 400,
+          "bytes": 324820,
+          "sha256": "1b08e7fc267a5c7e1d614100f604b83e7e8a0be241f0f288faa2b3ac93a683ba"
+        },
+        {
+          "resource": "inter_700",
+          "weight": 700,
+          "bytes": 326468,
+          "sha256": "b37284b5701b6b168dfc770aa1a4ac492106422fd3ba76bc7641e37434e8019c"
+        }
+      ],
+      "supportsThai": false,
+      "thaiCoverage": 0.012,
+      "latinCoverage": 1.0,
+      "license": "OFL-1.1",
+      "licenseFile": "licenses/fonts/inter.txt"
+    },
+    {
+      "id": "space_grotesk",
+      "family": "Space Grotesk",
+      "requestedWeights": [
+        400,
+        700
+      ],
+      "weights": [
+        400,
+        700
+      ],
+      "files": [
+        {
+          "resource": "space_grotesk_400",
+          "weight": 400,
+          "bytes": 69360,
+          "sha256": "ec926d5065eaca49a48f96e312bbae0bbc5733c24215cf5dfabbdccee926fef7"
+        },
+        {
+          "resource": "space_grotesk_700",
+          "weight": 700,
+          "bytes": 69308,
+          "sha256": "3e756954468ff1cb302dae0414262e72f76a67d87bef3fa1f3226cd0fb9b2d85"
+        }
+      ],
+      "supportsThai": false,
+      "thaiCoverage": 0.012,
+      "latinCoverage": 1.0,
+      "license": "OFL-1.1",
+      "licenseFile": "licenses/fonts/space_grotesk.txt"
+    },
+    {
+      "id": "space_mono",
+      "family": "Space Mono",
+      "requestedWeights": [
+        400,
+        700
+      ],
+      "weights": [
+        400,
+        700
+      ],
+      "files": [
+        {
+          "resource": "space_mono_400",
+          "weight": 400,
+          "bytes": 81124,
+          "sha256": "829aad32ab9525358de2a7ebc718d05a6b335e67421aad5e1e09cd1fa796af4e"
+        },
+        {
+          "resource": "space_mono_700",
+          "weight": 700,
+          "bytes": 79904,
+          "sha256": "5be2b984cdb8befc8ad1871d10f1aa8337f7d2bae3c6bf0ce720d0745ac1a8ec"
+        }
+      ],
+      "supportsThai": false,
+      "thaiCoverage": 0.0,
+      "latinCoverage": 1.0,
+      "license": "OFL-1.1",
+      "licenseFile": "licenses/fonts/space_mono.txt"
+    },
+    {
+      "id": "jetbrains_mono",
+      "family": "JetBrains Mono",
+      "requestedWeights": [
+        400,
+        700
+      ],
+      "weights": [
+        400,
+        700
+      ],
+      "files": [
+        {
+          "resource": "jetbrains_mono_400",
+          "weight": 400,
+          "bytes": 112172,
+          "sha256": "44ce4a84f20d60f24539bd0cef11f79c29e38609e0f8adf18551c9794a5d9dc3"
+        },
+        {
+          "resource": "jetbrains_mono_700",
+          "weight": 700,
+          "bytes": 112092,
+          "sha256": "a1d92abc6b02a87faed23d98067ab1027e8e95242fd7c9978a072ea383b89d1a"
+        }
+      ],
+      "supportsThai": false,
+      "thaiCoverage": 0.0,
+      "latinCoverage": 1.0,
+      "license": "OFL-1.1",
+      "licenseFile": "licenses/fonts/jetbrains_mono.txt"
+    },
+    {
+      "id": "ibm_plex_mono",
+      "family": "IBM Plex Mono",
+      "requestedWeights": [
+        400,
+        700
+      ],
+      "weights": [
+        400,
+        700
+      ],
+      "files": [
+        {
+          "resource": "ibm_plex_mono_400",
+          "weight": 400,
+          "bytes": 128692,
+          "sha256": "5cbc4288c3489acb668caf9bb59fcab8767f961575ad74c1366c40bc43a8cde3"
+        },
+        {
+          "resource": "ibm_plex_mono_700",
+          "weight": 700,
+          "bytes": 130920,
+          "sha256": "e4d9444d1275b26e6ac3d6f7b8c2eaf324b4fc167f7fd0dcdfe7069cfb4665fe"
+        }
+      ],
+      "supportsThai": false,
+      "thaiCoverage": 0.012,
+      "latinCoverage": 1.0,
+      "license": "OFL-1.1",
+      "licenseFile": "licenses/fonts/ibm_plex_mono.txt"
+    },
+    {
+      "id": "share_tech_mono",
+      "family": "Share Tech Mono",
+      "requestedWeights": [
+        400
+      ],
+      "weights": [
+        400
+      ],
+      "files": [
+        {
+          "resource": "share_tech_mono_400",
+          "weight": 400,
+          "bytes": 41912,
+          "sha256": "5f6b57538a1a35469a038dc3073003cebc4c101ad7b3c219e9555a3b3c0a81d2"
+        }
+      ],
+      "supportsThai": false,
+      "thaiCoverage": 0.0,
+      "latinCoverage": 1.0,
+      "license": "OFL-1.1",
+      "licenseFile": "licenses/fonts/share_tech_mono.txt"
+    },
+    {
+      "id": "vt323",
+      "family": "VT323",
+      "requestedWeights": [
+        400
+      ],
+      "weights": [
+        400
+      ],
+      "files": [
+        {
+          "resource": "vt323_400",
+          "weight": 400,
+          "bytes": 147320,
+          "sha256": "954e44d25e0ccd643f4ef15e75d56d3d76590d3c2b1e42b71b13d5df740a51a6"
+        }
+      ],
+      "supportsThai": false,
+      "thaiCoverage": 0.0,
+      "latinCoverage": 1.0,
+      "license": "OFL-1.1",
+      "licenseFile": "licenses/fonts/vt323.txt"
+    },
+    {
+      "id": "press_start_2p",
+      "family": "Press Start 2P",
+      "requestedWeights": [
+        400
+      ],
+      "weights": [
+        400
+      ],
+      "files": [
+        {
+          "resource": "press_start_2p_400",
+          "weight": 400,
+          "bytes": 115280,
+          "sha256": "7b939b816f8ce185dd8c2c59e85fb05d3dcd5cde0c0b0de4a1651cb5af9c2c2b"
+        }
+      ],
+      "supportsThai": false,
+      "thaiCoverage": 0.0,
+      "latinCoverage": 1.0,
+      "license": "OFL-1.1",
+      "licenseFile": "licenses/fonts/press_start_2p.txt"
+    },
+    {
+      "id": "silkscreen",
+      "family": "Silkscreen",
+      "requestedWeights": [
+        400,
+        700
+      ],
+      "weights": [
+        400,
+        700
+      ],
+      "files": [
+        {
+          "resource": "silkscreen_400",
+          "weight": 400,
+          "bytes": 31320,
+          "sha256": "734e6faa40fb5566327330d5b9b6e52fcc5d52ee91f0da1fe696ca33c5f7d258"
+        },
+        {
+          "resource": "silkscreen_700",
+          "weight": 700,
+          "bytes": 29744,
+          "sha256": "48f0553c450ff368e7f5db2288ca3d9faadd8b230671f2ca9d2f016f6e274676"
+        }
+      ],
+      "supportsThai": false,
+      "thaiCoverage": 0.0,
+      "latinCoverage": 1.0,
+      "license": "OFL-1.1",
+      "licenseFile": "licenses/fonts/silkscreen.txt"
+    },
+    {
+      "id": "orbitron",
+      "family": "Orbitron",
+      "requestedWeights": [
+        400,
+        700
+      ],
+      "weights": [
+        400,
+        700
+      ],
+      "files": [
+        {
+          "resource": "orbitron_400",
+          "weight": 400,
+          "bytes": 17752,
+          "sha256": "59c2bc6487139f1b8c5754e0cc98ea431ab4c1c1ee142d9d2433ecabe444b59a"
+        },
+        {
+          "resource": "orbitron_700",
+          "weight": 700,
+          "bytes": 17708,
+          "sha256": "a24fe8031eefd8451d40e31882868d768ce6bed7c3659293281b3c5c7732a952"
+        }
+      ],
+      "supportsThai": false,
+      "thaiCoverage": 0.0,
+      "latinCoverage": 1.0,
+      "license": "OFL-1.1",
+      "licenseFile": "licenses/fonts/orbitron.txt"
+    },
+    {
+      "id": "bebas_neue",
+      "family": "Bebas Neue",
+      "requestedWeights": [
+        400
+      ],
+      "weights": [
+        400
+      ],
+      "files": [
+        {
+          "resource": "bebas_neue_400",
+          "weight": 400,
+          "bytes": 56136,
+          "sha256": "939fea723dad24504f40faadc34eeffadfbbee558754f70c3c736e13786b0ab6"
+        }
+      ],
+      "supportsThai": false,
+      "thaiCoverage": 0.0,
+      "latinCoverage": 1.0,
+      "license": "OFL-1.1",
+      "licenseFile": "licenses/fonts/bebas_neue.txt"
+    },
+    {
+      "id": "archivo_black",
+      "family": "Archivo Black",
+      "requestedWeights": [
+        400
+      ],
+      "weights": [
+        400
+      ],
+      "files": [
+        {
+          "resource": "archivo_black_400",
+          "weight": 400,
+          "bytes": 87996,
+          "sha256": "355b89d43e95edd50a58dad2029689c56027ef19cf9f2f03c9d3605e87ee182e"
+        }
+      ],
+      "supportsThai": false,
+      "thaiCoverage": 0.0,
+      "latinCoverage": 1.0,
+      "license": "OFL-1.1",
+      "licenseFile": "licenses/fonts/archivo_black.txt"
+    },
+    {
+      "id": "playfair_display",
+      "family": "Playfair Display",
+      "requestedWeights": [
+        400,
+        700
+      ],
+      "weights": [
+        400,
+        700
+      ],
+      "files": [
+        {
+          "resource": "playfair_display_400",
+          "weight": 400,
+          "bytes": 123240,
+          "sha256": "1609a54fa3ad1abc8d0037132f73700333241ea0b65672079998e352f151dea7"
+        },
+        {
+          "resource": "playfair_display_700",
+          "weight": 700,
+          "bytes": 123536,
+          "sha256": "adefc53e7b3d483f1fa5e85edd82b7689ca79db25a1f6786bd7949cdcfeec601"
+        }
+      ],
+      "supportsThai": false,
+      "thaiCoverage": 0.0,
+      "latinCoverage": 1.0,
+      "license": "OFL-1.1",
+      "licenseFile": "licenses/fonts/playfair_display.txt"
+    },
+    {
+      "id": "dm_serif_display",
+      "family": "DM Serif Display",
+      "requestedWeights": [
+        400
+      ],
+      "weights": [
+        400
+      ],
+      "files": [
+        {
+          "resource": "dm_serif_display_400",
+          "weight": 400,
+          "bytes": 70348,
+          "sha256": "c03775f8cc3db88cfea259b231abe13f94e6a3d3cb01c09477a2e42a1f5919e1"
+        }
+      ],
+      "supportsThai": false,
+      "thaiCoverage": 0.0,
+      "latinCoverage": 1.0,
+      "license": "OFL-1.1",
+      "licenseFile": "licenses/fonts/dm_serif_display.txt"
+    },
+    {
+      "id": "major_mono_display",
+      "family": "Major Mono Display",
+      "requestedWeights": [
+        400
+      ],
+      "weights": [
+        400
+      ],
+      "files": [
+        {
+          "resource": "major_mono_display_400",
+          "weight": 400,
+          "bytes": 123028,
+          "sha256": "7401af2163f14e16183e2c39f74309529ba17a8cf575fac08d26c737c8e2980e"
+        }
+      ],
+      "supportsThai": false,
+      "thaiCoverage": 0.0,
+      "latinCoverage": 1.0,
+      "license": "OFL-1.1",
+      "licenseFile": "licenses/fonts/major_mono_display.txt"
+    },
+    {
+      "id": "monoton",
+      "family": "Monoton",
+      "requestedWeights": [
+        400
+      ],
+      "weights": [
+        400
+      ],
+      "files": [
+        {
+          "resource": "monoton_400",
+          "weight": 400,
+          "bytes": 49768,
+          "sha256": "c7ace162e95aa75817aad0963d23009190cd0a3a7cf80bf376d4de8f5200b376"
+        }
+      ],
+      "supportsThai": false,
+      "thaiCoverage": 0.0,
+      "latinCoverage": 1.0,
+      "license": "OFL-1.1",
+      "licenseFile": "licenses/fonts/monoton.txt"
+    },
+    {
+      "id": "audiowide",
+      "family": "Audiowide",
+      "requestedWeights": [
+        400
+      ],
+      "weights": [
+        400
+      ],
+      "files": [
+        {
+          "resource": "audiowide_400",
+          "weight": 400,
+          "bytes": 46972,
+          "sha256": "c42a74135f7f527e69a16826220cece45ec376776cfacdfd6cfd750053215146"
+        }
+      ],
+      "supportsThai": false,
+      "thaiCoverage": 0.0,
+      "latinCoverage": 1.0,
+      "license": "OFL-1.1",
+      "licenseFile": "licenses/fonts/audiowide.txt"
+    },
+    {
+      "id": "oswald",
+      "family": "Oswald",
+      "requestedWeights": [
+        300,
+        500,
+        700
+      ],
+      "weights": [
+        300,
+        500,
+        700
+      ],
+      "files": [
+        {
+          "resource": "oswald_300",
+          "weight": 300,
+          "bytes": 86312,
+          "sha256": "48056ef351e41aadd12f0305a9533fadb446eaf51ecf9c944d0c4bd79c880335"
+        },
+        {
+          "resource": "oswald_500",
+          "weight": 500,
+          "bytes": 86428,
+          "sha256": "edca7f2098242ead25675251ac9c35ecd2a9d001e4bcb641e07471148b6c365b"
+        },
+        {
+          "resource": "oswald_700",
+          "weight": 700,
+          "bytes": 86416,
+          "sha256": "a6ee8b91ec269a6f48631ba4ba1a3ab7e5039e5482dda8dc9672ee4620d7bd68"
+        }
+      ],
+      "supportsThai": false,
+      "thaiCoverage": 0.0,
+      "latinCoverage": 1.0,
+      "license": "OFL-1.1",
+      "licenseFile": "licenses/fonts/oswald.txt"
+    }
+  ],
+  "droppedWeights": []
+}

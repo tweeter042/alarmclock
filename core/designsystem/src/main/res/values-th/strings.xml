@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- นาฬิกา -->
+    <string name="ds_am">ก่อนเที่ยง</string>
+    <string name="ds_pm">หลังเที่ยง</string>
+    <string name="ds_clock_description">เวลา %1$s</string>
+
+    <!-- วันในสัปดาห์ เรียงแบบ ISO (1 = วันจันทร์) -->
+    <string name="ds_day_narrow_1">จ</string>
+    <string name="ds_day_narrow_2">อ</string>
+    <string name="ds_day_narrow_3">พ</string>
+    <string name="ds_day_narrow_4">พฤ</string>
+    <string name="ds_day_narrow_5">ศ</string>
+    <string name="ds_day_narrow_6">ส</string>
+    <string name="ds_day_narrow_7">อา</string>
+    <string name="ds_day_full_1">วันจันทร์</string>
+    <string name="ds_day_full_2">วันอังคาร</string>
+    <string name="ds_day_full_3">วันพุธ</string>
+    <string name="ds_day_full_4">วันพฤหัสบดี</string>
+    <string name="ds_day_full_5">วันศุกร์</string>
+    <string name="ds_day_full_6">วันเสาร์</string>
+    <string name="ds_day_full_7">วันอาทิตย์</string>
+
+    <!-- การกระทำและสถานะทั่วไป -->
+    <string name="ds_ok">ตกลง</string>
+    <string name="ds_cancel">ยกเลิก</string>
+    <string name="ds_close">ปิด</string>
+    <string name="ds_navigate_up">ย้อนกลับ</string>
+    <string name="ds_more_options">ตัวเลือกเพิ่มเติม</string>
+    <string name="ds_selected">เลือกอยู่</string>
+    <string name="ds_not_selected">ไม่ได้เลือก</string>
+    <string name="ds_on">เปิด</string>
+    <string name="ds_off">ปิด</string>
+    <string name="ds_switch_on">เปิด</string>
+    <string name="ds_switch_off">ปิด</string>
+    <string name="ds_loading">กำลังโหลด</string>
+    <string name="ds_progress_percent">%1$d%%</string>
+    <string name="ds_badge_overflow">%1$d+</string>
+    <string name="ds_drag_handle">แถบสำหรับลาก</string>
+
+    <!-- แกลเลอรีธีม -->
+    <string name="ds_theme_preview_description">ธีม%1$s ชุดสี%2$s แบบ%3$s</string>
+    <string name="ds_mode_light">สว่าง</string>
+    <string name="ds_mode_dark">มืด</string>
+    <string name="ds_palette_description">ชุดสี%1$s</string>
+    <string name="ds_dynamic_colors">ใช้สีจากวอลเปเปอร์ของคุณ</string>
+
+    <!-- หน้าปัดนาฬิกา -->
+    <string name="ds_face_plain">ดิจิทัล</string>
+    <string name="ds_face_seven_segment">ตัวเลข LCD</string>
+    <string name="ds_face_flip">แผ่นพลิก</string>
+    <string name="ds_face_analog">เข็มนาฬิกา</string>
+    <string name="ds_face_pixel">จุดพิกเซล</string>
+    <string name="ds_face_terminal">เทอร์มินัล</string>
+    <string name="ds_face_neon">นีออนเรืองแสง</string>
+    <string name="ds_face_serif">ตัวมีเชิง</string>
+
+    <!-- ฟอนต์ -->
+    <string name="ds_font_theme_default">ฟอนต์ตามธีม</string>
+    <string name="ds_font_system">ฟอนต์ของระบบ</string>
+    <string name="ds_font_category_sans">ไม่มีเชิง</string>
+    <string name="ds_font_category_serif">มีเชิง</string>
+    <string name="ds_font_category_mono">ความกว้างเท่ากัน</string>
+    <string name="ds_font_category_display">ตัวตกแต่ง</string>
+    <string name="ds_font_category_handwriting">ลายมือ</string>
+    <string name="ds_font_category_pixel">พิกเซล</string>
+    <string name="ds_font_import_unreadable">อ่านไฟล์ฟอนต์ไม่ได้</string>
+    <string name="ds_font_import_too_large">ไฟล์ฟอนต์ใหญ่เกินไป (สูงสุด 32 MB)</string>
+    <string name="ds_font_import_not_font">ไฟล์นี้ไม่ใช่ฟอนต์ TrueType หรือ OpenType</string>
+    <string name="ds_font_sample">ตื่นนอน 07:30 Wake up</string>
+</resources>
