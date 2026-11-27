@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ข้อผิดพลาดของการสำรองและกู้คืนข้อมูล (core:data BackupException.messageRes) -->
+    <string name="data_backup_error_invalid">ไฟล์นี้ไม่ใช่ไฟล์สำรองข้อมูลของนาฬิกาปลุก หรือไฟล์อาจเสียหาย</string>
+    <string name="data_backup_error_version">ไฟล์สำรองนี้สร้างจากนาฬิกาปลุกเวอร์ชันที่ใหม่กว่า โปรดอัปเดตแอปแล้วลองอีกครั้ง</string>
+    <string name="data_backup_error_folder">เข้าถึงโฟลเดอร์สำรองข้อมูลไม่ได้ โปรดเลือกโฟลเดอร์อีกครั้งในการตั้งค่าการสำรองข้อมูล</string>
+    <string name="data_backup_error_io">อ่านหรือบันทึกไฟล์สำรองข้อมูลไม่สำเร็จ โปรดตรวจสอบว่ามีพื้นที่เก็บข้อมูลเพียงพอแล้วลองอีกครั้ง</string>
+</resources>
