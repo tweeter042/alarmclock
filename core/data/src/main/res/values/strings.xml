@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Backup & restore errors (core:data BackupException.messageRes) -->
+    <string name="data_backup_error_invalid">This file isn\'t an Alarm Clock backup, or it\'s damaged.</string>
+    <string name="data_backup_error_version">This backup was made with a newer version of Alarm Clock. Update the app and try again.</string>
+    <string name="data_backup_error_folder">Can\'t reach the backup folder. Choose the folder again in Backup settings.</string>
+    <string name="data_backup_error_io">The backup couldn\'t be read or saved. Check that there\'s enough storage and try again.</string>
+</resources>

@@ -29,3 +29,11 @@ ksp {
     arg("room.schemaLocation", "$projectDir/schemas")
     arg("room.generateKotlin", "true")
 }
+
+// The changelog shipped in :app's assets is parsed by ChangelogRepositoryTest, so a broken
+// changelog.json fails this module's tests (and re-runs them whenever the file changes).
+val changelogAsset = rootProject.file("app/src/main/assets/changelog.json")
+tasks.withType<Test>().configureEach {
+    inputs.file(changelogAsset).withPropertyName("changelogAsset")
+    systemProperty("alarmclock.changelogAsset", changelogAsset.absolutePath)
+}
