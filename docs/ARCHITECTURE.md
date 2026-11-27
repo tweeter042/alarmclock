@@ -82,7 +82,8 @@ Dependency rules (acyclic, enforced by build files):
 
 - `core:model` ← everything. `core:data` → model. `core:alarm` → model, data. `core:designsystem` → model.
 - `core:ui` → model (api), designsystem (api). Every feature → `core:ui`.
-- Allowed feature→feature edges: `alarms → missions, connected, integrations`; `ringing → missions`.
+- Allowed feature→feature edges: `alarms → missions, connected, integrations`; `ringing → missions`;
+  `sleep → connected`.
   No other feature-to-feature dependencies. Cross-feature navigation uses routes from `core:ui`.
 - `:app` depends on everything. `:wear` → model, wearprotocol.
 
