@@ -190,7 +190,7 @@ internal object ThemeDefinitions {
                 ),
                 dark = brutalColors(
                     dark = true, background = 0xFF121212, surface = 0xFF1E1E1E, surfaceVariant = 0xFF2A2A2A,
-                    ink = 0xFFFAFAFA, inkMuted = 0xFFC8C8C8, line = 0xFFFFD23F,
+                    ink = 0xFFFAFAFA, inkMuted = 0xFFC8C8C8, line = 0xFFFAFAFA,
                     primary = 0xFFFFD23F, onPrimary = 0xFF0A0A0A,
                     secondary = 0xFF2A2A2A, onSecondary = 0xFFFAFAFA,
                     accent = 0xFFFF5C8A, onAccent = 0xFF0A0A0A,
@@ -209,7 +209,7 @@ internal object ThemeDefinitions {
                 ),
                 dark = brutalColors(
                     dark = true, background = 0xFF141014, surface = 0xFF201A20, surfaceVariant = 0xFF2C232C,
-                    ink = 0xFFFFF5FD, inkMuted = 0xFFD6C3D3, line = 0xFFFF90E8,
+                    ink = 0xFFFFF5FD, inkMuted = 0xFFD6C3D3, line = 0xFFFFF5FD,
                     primary = 0xFFFF90E8, onPrimary = 0xFF000000,
                     secondary = 0xFF2C232C, onSecondary = 0xFFFFF5FD,
                     accent = 0xFFFFC900, onAccent = 0xFF000000,
@@ -228,7 +228,7 @@ internal object ThemeDefinitions {
                 ),
                 dark = brutalColors(
                     dark = true, background = 0xFF1A0B33, surface = 0xFF26124A, surfaceVariant = 0xFF331A5E,
-                    ink = 0xFFF4FFE0, inkMuted = 0xFFCFC2E6, line = 0xFFCFFF4A,
+                    ink = 0xFFF4FFE0, inkMuted = 0xFFCFC2E6, line = 0xFFF4FFE0,
                     primary = 0xFFCFFF4A, onPrimary = 0xFF1A0B33,
                     secondary = 0xFF331A5E, onSecondary = 0xFFF4FFE0,
                     accent = 0xFFFF8A5C, onAccent = 0xFF1A0B33,
@@ -247,7 +247,7 @@ internal object ThemeDefinitions {
                 ),
                 dark = brutalColors(
                     dark = true, background = 0xFF0B1A3D, surface = 0xFF13275A, surfaceVariant = 0xFF1B3470,
-                    ink = 0xFFF0F5FF, inkMuted = 0xFFC2D0EE, line = 0xFFFF7A1F,
+                    ink = 0xFFF0F5FF, inkMuted = 0xFFC2D0EE, line = 0xFFF0F5FF,
                     primary = 0xFFFF7A1F, onPrimary = 0xFF0A0F1F,
                     secondary = 0xFF1B3470, onSecondary = 0xFFF0F5FF,
                     accent = 0xFF7FB2FF, onAccent = 0xFF0A0F1F,
@@ -266,7 +266,7 @@ internal object ThemeDefinitions {
                 ),
                 dark = brutalColors(
                     dark = true, background = 0xFF240B0E, surface = 0xFF33121A, surfaceVariant = 0xFF431925,
-                    ink = 0xFFFFF0D6, inkMuted = 0xFFE0C3AE, line = 0xFFFF5A5F,
+                    ink = 0xFFFFF0D6, inkMuted = 0xFFE0C3AE, line = 0xFFFFF0D6,
                     primary = 0xFFFF5A5F, onPrimary = 0xFF1C0A0A,
                     secondary = 0xFF431925, onSecondary = 0xFFFFF0D6,
                     accent = 0xFFFFB703, onAccent = 0xFF1C0A0A,
