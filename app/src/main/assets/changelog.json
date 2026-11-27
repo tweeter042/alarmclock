@@ -1,0 +1,293 @@
+[
+  {
+    "versionName": "1.0.0",
+    "versionCode": 1,
+    "date": "2026-11-27",
+    "highlights": [
+      {
+        "en": "Alarms your way: weekly repeats, one-off dates, shift rotations, Skip next and automatic Thai public holidays.",
+        "th": "ตั้งปลุกได้ตามใจ ทั้งปลุกซ้ำรายสัปดาห์ ปลุกครั้งเดียวตามวันที่ ปลุกตามรอบเข้ากะ ข้ามการปลุกครั้งถัดไป และเว้นวันหยุดนักขัตฤกษ์ไทยให้อัตโนมัติ"
+      },
+      {
+        "en": "Built to ring every time: exact alarms, ringing even before you unlock after a restart, and a Samsung setup check against battery optimisation.",
+        "th": "ออกแบบมาให้ดังทุกครั้ง: ปลุกตรงเวลา ดังได้แม้รีสตาร์ตเครื่องแล้วยังไม่ได้ปลดล็อก และมีหน้าตรวจความพร้อมสำหรับ Samsung กันแอปโดนปิดจากการประหยัดแบตเตอรี่"
+      },
+      {
+        "en": "Wake-up missions that make sure you're really up: math, shake, QR/barcode, photo, steps, typing, memory and S Pen handwriting.",
+        "th": "ภารกิจปลุกที่ทำให้ตื่นจริง: โจทย์เลข เขย่าเครื่อง สแกน QR/บาร์โค้ด ถ่ายรูป เดิน พิมพ์ประโยค เกมความจำ และเขียนด้วย S Pen"
+      },
+      {
+        "en": "12 design themes, each with several light and dark colour palettes, plus Thai-ready fonts you can choose.",
+        "th": "ธีมดีไซน์ 12 แบบ แต่ละธีมมีหลายคู่สีทั้งโหมดสว่างและมืด พร้อมฟอนต์ที่รองรับภาษาไทยให้เลือกเอง"
+      },
+      {
+        "en": "Galaxy Watch app: gentle wrist vibration, snooze or dismiss from your watch, and smart wake during light sleep.",
+        "th": "แอปบน Galaxy Watch: สั่นเบา ๆ ที่ข้อมือ เลื่อนหรือปิดปลุกจากนาฬิกาได้ และปลุกอัจฉริยะในช่วงหลับตื้น"
+      },
+      {
+        "en": "Sleep tools: bedtime reminders, wake times based on 90-minute cycles, sleep sounds and sleep stats from Health Connect.",
+        "th": "ตัวช่วยเรื่องการนอน: เตือนเวลาเข้านอน แนะนำเวลาตื่นตามรอบการนอน 90 นาที เสียงช่วยให้หลับ และสถิติการนอนจาก Health Connect"
+      },
+      {
+        "en": "Sunrise wake-up with your screen and SmartThings lights, plus a spoken morning briefing.",
+        "th": "ปลุกด้วยแสงอรุณจากหน้าจอและไฟ SmartThings พร้อมอ่านสรุปข้อมูลยามเช้าให้ฟัง"
+      },
+      {
+        "en": "Fully in English and Thai, with optional Thai numerals and Buddhist-era years.",
+        "th": "ใช้งานได้ครบทั้งภาษาอังกฤษและภาษาไทย เลือกแสดงเลขไทยและปี พ.ศ. ได้"
+      }
+    ],
+    "new": [
+      {
+        "en": "Set alarms in 12- or 24-hour format, each with its own label and on/off switch.",
+        "th": "ตั้งปลุกได้ทั้งแบบ 12 และ 24 ชั่วโมง ตั้งชื่อและเปิด/ปิดแต่ละปลุกได้"
+      },
+      {
+        "en": "Repeat on weekdays, weekends, every day or days you pick, or ring once on a chosen date.",
+        "th": "ปลุกซ้ำวันทำงาน เสาร์–อาทิตย์ ทุกวัน หรือเลือกวันเอง หรือปลุกครั้งเดียวในวันที่เลือก"
+      },
+      {
+        "en": "Shift-work rotations such as 4 days on, 2 days off.",
+        "th": "ปลุกตามรอบเข้ากะ เช่น ทำงาน 4 วัน หยุด 2 วัน"
+      },
+      {
+        "en": "See how long until an alarm rings, and skip only the next one with Skip next.",
+        "th": "ดูเวลาที่เหลือก่อนปลุกดัง และข้ามเฉพาะการปลุกครั้งถัดไปได้"
+      },
+      {
+        "en": "Skip Thai public holidays automatically, using the built-in dates or your holiday calendar.",
+        "th": "ข้ามการปลุกในวันหยุดนักขัตฤกษ์ไทยให้อัตโนมัติ จากข้อมูลวันหยุดในแอปหรือปฏิทินวันหยุดของคุณ"
+      },
+      {
+        "en": "Alarm groups to turn a whole set of alarms on or off at once.",
+        "th": "จัดกลุ่มปลุก เปิดหรือปิดทั้งกลุ่มได้ในครั้งเดียว"
+      },
+      {
+        "en": "Quick naps and one-tap \"alarm in N minutes\".",
+        "th": "งีบสั้น ๆ และแตะครั้งเดียวก็ตั้งปลุกด่วนอีก N นาทีได้"
+      },
+      {
+        "en": "Calendar alarms that wake you a set time before your first event of the day.",
+        "th": "ปลุกตามปฏิทิน ปลุกก่อนนัดแรกของวันตามเวลาที่ตั้งไว้"
+      },
+      {
+        "en": "Location alarms that ring as you approach your stop or station.",
+        "th": "ปลุกตามสถานที่ ดังเมื่อใกล้ถึงป้ายรถหรือสถานีที่ตั้งไว้"
+      },
+      {
+        "en": "Weather-aware alarms that ring earlier when rain or storms are forecast.",
+        "th": "ปรับเวลาปลุกตามสภาพอากาศ ปลุกเร็วขึ้นเมื่อพยากรณ์ว่าฝนจะตกหรือมีพายุ"
+      },
+      {
+        "en": "Default settings for new alarms.",
+        "th": "กำหนดค่าเริ่มต้นสำหรับปลุกใหม่ได้"
+      },
+      {
+        "en": "Built-in tones, system ringtones, your own music files or a shuffled playlist.",
+        "th": "เลือกเสียงในตัวแอป ริงโทนของเครื่อง ไฟล์เพลงของคุณ หรือสุ่มเพลงจากเพลย์ลิสต์"
+      },
+      {
+        "en": "Per-alarm volume, gradual fade-in and a choice of vibration patterns.",
+        "th": "ตั้งระดับเสียงแยกแต่ละปลุก ค่อย ๆ เพิ่มความดัง และเลือกรูปแบบการสั่นได้"
+      },
+      {
+        "en": "Alarms play on the alarm stream, so they ring through silent mode and Do Not Disturb, with a backup tone if your sound can't play.",
+        "th": "เสียงปลุกดังผ่านช่องเสียงนาฬิกาปลุก จึงดังได้แม้อยู่ในโหมดเงียบหรือห้ามรบกวน และมีเสียงสำรองหากเล่นเสียงที่เลือกไม่ได้"
+      },
+      {
+        "en": "Experimental Spotify alarms, and open Spotify or YouTube Music as soon as you dismiss.",
+        "th": "ทดลองใช้เพลงจาก Spotify เป็นเสียงปลุก และเปิด Spotify หรือ YouTube Music ต่อได้ทันทีหลังปิดปลุก"
+      },
+      {
+        "en": "A spoken briefing with the time, weather and today's events, in the app's language.",
+        "th": "อ่านออกเสียงเวลา สภาพอากาศ และนัดหมายวันนี้ ตามภาษาที่เลือกในแอป"
+      },
+      {
+        "en": "Choose the snooze length and limit, make each snooze shorter, or require a mission to snooze.",
+        "th": "กำหนดระยะเวลาและจำนวนครั้งที่เลื่อนปลุกได้ ให้เลื่อนสั้นลงทุกครั้ง หรือต้องทำภารกิจก่อนจึงเลื่อนได้"
+      },
+      {
+        "en": "Automatic snooze or dismiss when an alarm rings for too long.",
+        "th": "เลื่อนหรือปิดปลุกให้อัตโนมัติเมื่อดังนานเกินกำหนด"
+      },
+      {
+        "en": "Flip the phone over, or press the volume, power or S Pen button to snooze or dismiss.",
+        "th": "คว่ำเครื่อง หรือกดปุ่มปรับเสียง ปุ่มเปิด/ปิด หรือปุ่ม S Pen เพื่อเลื่อนหรือปิดปลุก"
+      },
+      {
+        "en": "Missions: math at four difficulty levels, shaking, scanning a registered QR code or barcode, photographing a registered object (recognised on the device), walking a number of steps, typing a sentence and a memory game.",
+        "th": "ภารกิจ: โจทย์เลข 4 ระดับความยาก เขย่าเครื่อง สแกน QR โค้ดหรือบาร์โค้ดที่ลงทะเบียนไว้ ถ่ายรูปวัตถุที่ลงทะเบียนไว้ (ประมวลผลบนเครื่อง) เดินให้ครบจำนวนก้าว พิมพ์ประโยค และเกมความจำ"
+      },
+      {
+        "en": "S Pen handwriting mission in Thai or English, and hover the S Pen over an alarm to see its details.",
+        "th": "ภารกิจเขียนลายมือด้วย S Pen ได้ทั้งภาษาไทยและอังกฤษ และชี้ S Pen เหนือปลุกเพื่อดูรายละเอียดได้"
+      },
+      {
+        "en": "An \"Are you awake?\" check after you dismiss, and an anti-cheat mode that keeps ringing until the missions are done.",
+        "th": "ถามซ้ำว่า \"ตื่นหรือยัง\" หลังปิดปลุก และโหมดกันโกงที่ปลุกต่อจนกว่าจะทำภารกิจเสร็จ"
+      },
+      {
+        "en": "Full-screen ring screen over the lock screen, with big, easy buttons and the time, date, label and weather.",
+        "th": "หน้าจอปลุกเต็มจอบนหน้าล็อก ปุ่มใหญ่กดง่าย แสดงเวลา วันที่ ชื่อปลุก และสภาพอากาศ"
+      },
+      {
+        "en": "Animated backgrounds that match your theme, with an optional separate theme for the ring screen.",
+        "th": "พื้นหลังเคลื่อนไหวตามธีม และตั้งธีมแยกสำหรับหน้าจอปลุกได้"
+      },
+      {
+        "en": "Morning routine checklist, quote of the day and news headlines after you wake up.",
+        "th": "เช็กลิสต์กิจวัตรยามเช้า คำคมประจำวัน และพาดหัวข่าวหลังตื่นนอน"
+      },
+      {
+        "en": "World clock for the cities you follow.",
+        "th": "นาฬิกาโลกสำหรับเมืองที่คุณติดตาม"
+      },
+      {
+        "en": "Run several timers at once and start them from presets.",
+        "th": "ใช้ตัวจับเวลาหลายตัวพร้อมกัน และเริ่มจากค่าที่ตั้งไว้ล่วงหน้าได้"
+      },
+      {
+        "en": "Stopwatch with laps.",
+        "th": "นาฬิกาจับเวลาพร้อมบันทึกรอบ"
+      },
+      {
+        "en": "Bedside night clock, perfect with the AMOLED Black theme.",
+        "th": "นาฬิกาข้างเตียงสำหรับกลางคืน เข้ากันดีกับธีม AMOLED Black"
+      },
+      {
+        "en": "Bedtime reminder that can turn on Do Not Disturb and warns you when the battery is low before bed.",
+        "th": "เตือนเวลาเข้านอน เปิดโหมดห้ามรบกวนให้ได้ และเตือนเมื่อแบตเตอรี่เหลือน้อยก่อนนอน"
+      },
+      {
+        "en": "Wake-up time suggestions based on 90-minute sleep cycles.",
+        "th": "แนะนำเวลาตื่นตามรอบการนอน 90 นาที"
+      },
+      {
+        "en": "Smart alarm that wakes you in light sleep, within a window you choose.",
+        "th": "ปลุกอัจฉริยะที่ปลุกคุณในช่วงหลับตื้น ภายในช่วงเวลาที่กำหนด"
+      },
+      {
+        "en": "Sleep and snooze statistics.",
+        "th": "สถิติการนอนและการเลื่อนปลุก"
+      },
+      {
+        "en": "Sleep sounds with a sleep timer.",
+        "th": "เสียงช่วยให้หลับพร้อมตั้งเวลาปิด"
+      },
+      {
+        "en": "Sunrise alarm that slowly brightens the screen before the alarm time.",
+        "th": "ปลุกแบบแสงอรุณ ค่อย ๆ เพิ่มความสว่างหน้าจอก่อนถึงเวลาปลุก"
+      },
+      {
+        "en": "Home screen widgets in every size that follow your theme and palette.",
+        "th": "วิดเจ็ตหน้าจอหลักทุกขนาด เปลี่ยนตามธีมและคู่สีที่เลือก"
+      },
+      {
+        "en": "Quick panel tiles and app shortcuts for naps, timers and your next alarm.",
+        "th": "ไทล์ในแผงด่วนและทางลัดของแอป สำหรับงีบ ตัวจับเวลา และปลุกถัดไป"
+      },
+      {
+        "en": "Works with \"set an alarm\" requests from Google Assistant and other apps, and with Samsung Modes and Routines.",
+        "th": "รองรับคำสั่งตั้งปลุกจาก Google Assistant และแอปอื่น ๆ รวมถึงโหมดและรูทีนของ Samsung"
+      },
+      {
+        "en": "Your next alarm on the Always On Display and the lock screen.",
+        "th": "แสดงปลุกถัดไปบน Always On Display และหน้าล็อก"
+      },
+      {
+        "en": "Back up and restore to a file or a Google Drive folder, with optional automatic backups. Secrets such as SmartThings tokens are never included.",
+        "th": "สำรองและกู้คืนข้อมูลเป็นไฟล์หรือในโฟลเดอร์ Google Drive ตั้งให้สำรองอัตโนมัติได้ และจะไม่รวมข้อมูลลับอย่างโทเค็น SmartThings"
+      },
+      {
+        "en": "Accessibility: TalkBack support, large buttons, high contrast, reduced motion and large text.",
+        "th": "การช่วยการเข้าถึง: รองรับ TalkBack ปุ่มขนาดใหญ่ ความคมชัดสูง ลดการเคลื่อนไหว และตัวอักษรขนาดใหญ่"
+      },
+      {
+        "en": "One-handed layout with the main actions in the lower half of the screen.",
+        "th": "เลย์เอาต์ที่ใช้มือเดียวได้สะดวก ปุ่มหลักอยู่ครึ่งล่างของหน้าจอ"
+      },
+      {
+        "en": "Exact alarms that are set again automatically after a restart, an app update or a time or time-zone change.",
+        "th": "ปลุกตรงเวลา และตั้งปลุกใหม่ให้อัตโนมัติหลังรีสตาร์ตเครื่อง อัปเดตแอป หรือเปลี่ยนเวลาและโซนเวลา"
+      },
+      {
+        "en": "Alarms ring even after a restart, before you unlock the phone.",
+        "th": "ปลุกดังได้แม้รีสตาร์ตเครื่องแล้วยังไม่ได้ปลดล็อก"
+      },
+      {
+        "en": "A watchdog that checks your alarms are still scheduled, repairs them and tells you about missed alarms.",
+        "th": "ระบบเฝ้าระวังที่คอยตรวจว่าปลุกยังตั้งไว้ครบและซ่อมให้เอง พร้อมแจ้งเตือนเมื่อมีปลุกที่พลาดไป"
+      },
+      {
+        "en": "Samsung setup wizard and checklist: battery, Never sleeping apps, Put unused apps to sleep, permissions and Recents lock, finished with a real test alarm.",
+        "th": "ตัวช่วยตั้งค่าและหน้าตรวจความพร้อมสำหรับ Samsung: แบตเตอรี่ แอปที่ไม่พักการทำงาน การพักแอปที่ไม่ได้ใช้งาน สิทธิ์ต่าง ๆ และการล็อกแอปในหน้าแอปล่าสุด ปิดท้ายด้วยการทดสอบปลุกจริง"
+      },
+      {
+        "en": "Optional always-on alarm guard for an extra layer of protection.",
+        "th": "บริการเฝ้าปลุกแบบทำงานตลอดเวลา เปิดใช้เองได้เพื่อเพิ่มการป้องกันอีกชั้น"
+      },
+      {
+        "en": "Alarm notifications tinted with your theme colour for Edge lighting.",
+        "th": "การแจ้งเตือนปลุกใช้สีของธีมกับไฟขอบจอ (Edge lighting)"
+      },
+      {
+        "en": "Galaxy Watch app: alarms vibrate on your wrist, snooze or dismiss from the watch, and a watch-only mode that won't wake the person next to you.",
+        "th": "แอปบน Galaxy Watch: ปลุกด้วยการสั่นที่ข้อมือ เลื่อนหรือปิดปลุกจากนาฬิกาได้ และโหมดปลุกเฉพาะนาฬิกาที่ไม่รบกวนคนข้าง ๆ"
+      },
+      {
+        "en": "Alarms sync with the watch without the internet, and still ring on the watch when the phone is out of reach.",
+        "th": "ซิงก์ปลุกกับนาฬิกาได้โดยไม่ต้องใช้อินเทอร์เน็ต และนาฬิกายังปลุกได้แม้โทรศัพท์อยู่ไกล"
+      },
+      {
+        "en": "Smart wake with the watch's motion and heart-rate sensors, missions on the watch, a tile and a complication.",
+        "th": "ปลุกอัจฉริยะด้วยเซนเซอร์ตรวจจับการเคลื่อนไหวและอัตราการเต้นของหัวใจบนนาฬิกา ทำภารกิจบนนาฬิกาได้ พร้อมไทล์และคอมพลิเคชัน"
+      },
+      {
+        "en": "Timer and stopwatch on the watch, kept in sync with your phone.",
+        "th": "ตัวจับเวลาและนาฬิกาจับเวลาบนนาฬิกา ซิงก์กับโทรศัพท์ให้ตรงกัน"
+      },
+      {
+        "en": "SmartThings: lights that slowly brighten from warm to daylight before your alarm, scenes when an alarm rings or is dismissed, and dimming at bedtime.",
+        "th": "SmartThings: ไฟค่อย ๆ สว่างขึ้นจากโทนอุ่นเป็นแสงกลางวันก่อนเวลาปลุก สั่งงานฉากเมื่อปลุกดังหรือปิดปลุก และหรี่ไฟเมื่อถึงเวลานอน"
+      },
+      {
+        "en": "Your alarm always rings, even if SmartThings can't be reached; you'll get a notice instead.",
+        "th": "ปลุกจะดังตามปกติเสมอแม้เชื่อมต่อ SmartThings ไม่ได้ และจะแจ้งให้ทราบแทน"
+      },
+      {
+        "en": "Sleep data from Samsung Health, through Health Connect, in your sleep statistics.",
+        "th": "ดึงข้อมูลการนอนจาก Samsung Health ผ่าน Health Connect มาแสดงในสถิติการนอน"
+      },
+      {
+        "en": "12 themes: Minimal, Brutal, Retro LCD, Flip Clock, Glass, Material You, Terminal, Neon, Paper, Pixel, Analog and AMOLED Black. Each changes shapes, borders, shadows, motion and the clock face.",
+        "th": "ธีม 12 แบบ ได้แก่ Minimal, Brutal, Retro LCD, Flip Clock, Glass, Material You, Terminal, Neon, Paper, Pixel, Analog และ AMOLED Black แต่ละธีมเปลี่ยนทั้งรูปทรง เส้นขอบ เงา การเคลื่อนไหว และหน้าปัดนาฬิกา"
+      },
+      {
+        "en": "Several colour palettes per theme, each in light and dark, with a live preview.",
+        "th": "แต่ละธีมมีหลายคู่สี ทั้งแบบสว่างและมืด พร้อมดูตัวอย่างจริงก่อนใช้"
+      },
+      {
+        "en": "Separate fonts for the clock digits and for text, with Thai always displayed correctly.",
+        "th": "เลือกฟอนต์ตัวเลขนาฬิกาและฟอนต์ข้อความแยกกันได้ และแสดงภาษาไทยได้ถูกต้องเสมอ"
+      },
+      {
+        "en": "English and Thai, switchable in the app or in Android's app language settings.",
+        "th": "รองรับภาษาอังกฤษและภาษาไทย เปลี่ยนได้ทันทีในแอปหรือในการตั้งค่าภาษาของแอปใน Android"
+      },
+      {
+        "en": "Optional Thai numerals (๐–๙) and Buddhist-era years.",
+        "th": "เลือกแสดงเลขไทย (๐–๙) และปี พ.ศ. ได้"
+      },
+      {
+        "en": "What's new after every update, and a full changelog in English and Thai.",
+        "th": "แสดงสิ่งใหม่หลังอัปเดตทุกครั้ง พร้อมประวัติการเปลี่ยนแปลงทั้งหมดเป็นภาษาอังกฤษและภาษาไทย"
+      },
+      {
+        "en": "About screen with the app version, build date, a note that the app was developed with AI assistance, and open-source licences.",
+        "th": "หน้าเกี่ยวกับแอป แสดงเวอร์ชัน วันที่ build ข้อความแจ้งว่าแอปนี้พัฒนาโดยใช้ AI ช่วย และสัญญาอนุญาตโอเพนซอร์ส"
+      }
+    ],
+    "improved": [],
+    "fixed": []
+  }
+]
