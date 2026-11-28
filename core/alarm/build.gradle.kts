@@ -5,11 +5,18 @@ plugins {
 
 android {
     namespace = "io.github.tweeter042.alarmclock.core.alarm"
+
+    testOptions {
+        unitTests.all {
+            it.maxHeapSize = "2g"
+        }
+    }
 }
 
 dependencies {
     api(project(":core:model"))
-    implementation(project(":core:data"))
+    // DataGraph is part of the public constructor of DefaultAlarmEngine.
+    api(project(":core:data"))
     implementation(libs.androidx.core.ktx)
     implementation(libs.kotlinx.coroutines.android)
     implementation(libs.androidx.media3.exoplayer)

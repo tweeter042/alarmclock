@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Notification channels (Settings › Notifications › Alarm Clock) -->
+    <string name="engine_channel_alarms_name">Ringing alarms</string>
+    <string name="engine_channel_alarms_desc">Shows the alarm full screen while it rings, also on the lock screen.</string>
+    <string name="engine_channel_upcoming_name">Upcoming alarms</string>
+    <string name="engine_channel_upcoming_desc">A reminder shortly before an alarm rings, with a button to turn it off in advance.</string>
+    <string name="engine_channel_snoozed_name">Snoozed alarms</string>
+    <string name="engine_channel_snoozed_desc">Shows when a snoozed alarm will ring again.</string>
+    <string name="engine_channel_missed_name">Missed and stopped alarms</string>
+    <string name="engine_channel_missed_desc">Tells you when an alarm could not ring, stopped by itself or had to be set again.</string>
+    <string name="engine_channel_guard_name">Alarm guard</string>
+    <string name="engine_channel_guard_desc">Ongoing notification of the optional guard that keeps alarms reliable.</string>
+    <string name="engine_channel_timers_name">Finished timers</string>
+    <string name="engine_channel_timers_desc">Shows a timer when it reaches zero.</string>
+    <string name="engine_channel_awake_name">Awake check</string>
+    <string name="engine_channel_awake_desc">Asks whether you are really awake a few minutes after you turn off an alarm.</string>
+    <string name="engine_channel_sunrise_name">Sunrise</string>
+    <string name="engine_channel_sunrise_desc">Gradually brightens the screen before a sunrise alarm.</string>
+
+    <!-- Ringing notification -->
+    <string name="engine_ring_title_alarm">Alarm</string>
+    <string name="engine_ring_title_timer">Timer</string>
+    <string name="engine_ring_title_nap">Nap</string>
+    <string name="engine_ring_title_test">Test alarm</string>
+    <string name="engine_ring_title_calendar">Calendar alarm</string>
+    <string name="engine_ring_title_location">Location alarm</string>
+    <string name="engine_ring_text_time">Ringing · %1$s</string>
+    <string name="engine_ring_text_timer">Time\'s up</string>
+    <string name="engine_ring_text_mission">Finish the mission to turn off the alarm</string>
+    <string name="engine_ring_text_watch">Ringing on your watch</string>
+    <string name="engine_action_snooze">Snooze</string>
+    <string name="engine_action_dismiss">Dismiss</string>
+    <string name="engine_action_add_minute">+1 minute</string>
+    <string name="engine_action_stop">Stop</string>
+
+    <!-- Snoozed -->
+    <string name="engine_snoozed_title">Snoozed until %1$s</string>
+
+    <!-- Upcoming alarm -->
+    <string name="engine_upcoming_title">Upcoming alarm %1$s</string>
+    <string name="engine_upcoming_title_label">Upcoming alarm %1$s · %2$s</string>
+    <string name="engine_upcoming_text">Already up? Turn it off with Dismiss now.</string>
+    <string name="engine_action_dismiss_now">Dismiss now</string>
+
+    <!-- Missed / stopped / restored -->
+    <string name="engine_missed_title">Missed alarm at %1$s</string>
+    <string name="engine_missed_text">The phone was off or restarting when this alarm was due.</string>
+    <string name="engine_auto_stopped_title">Alarm stopped automatically</string>
+    <plurals name="engine_auto_stopped_text">
+        <item quantity="one">It rang for %d minute without a response.</item>
+        <item quantity="other">It rang for %d minutes without a response.</item>
+    </plurals>
+    <string name="engine_restored_title">Alarms set again</string>
+    <string name="engine_restored_text">Android had removed this app\'s alarms, for example after Force stop. They are set again. Open Health check to keep this from happening.</string>
+
+    <!-- Alarm guard -->
+    <string name="engine_guard_title">Alarm guard active</string>
+    <string name="engine_guard_text_next">Next alarm %1$s</string>
+    <string name="engine_guard_text_none">No alarms set</string>
+
+    <!-- Awake check -->
+    <string name="engine_awake_title">Are you awake?</string>
+    <string name="engine_awake_text">Confirm, or the alarm rings again.</string>
+    <string name="engine_action_awake">I\'m awake</string>
+
+    <!-- Sunrise -->
+    <string name="engine_sunrise_title">Sunrise has started</string>
+    <string name="engine_sunrise_text">Your alarm rings at %1$s</string>
+
+    <!-- Morning briefing read after dismissing -->
+    <string name="engine_briefing_title">Morning briefing</string>
+    <string name="engine_briefing_text">Reading your morning briefing…</string>
+</resources>

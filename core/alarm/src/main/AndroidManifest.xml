@@ -1,3 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<!--
+    The alarm engine. Every component here is on the ring path, so all of them are
+    directBootAware (alarms ring after a reboot, before the first unlock) and none of them sets
+    android:process: Room/DataStore change notifications are per process.
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Exact alarms. Sideloaded alarm clock: USE_EXACT_ALARM is granted at install time. -->
+    <uses-permission android:name="android.permission.USE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SYSTEM_EXEMPTED" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+
+    <application>
+
+        <!-- Fires every trigger registered by the scheduler (rings and pre-alarm events). -->
+        <receiver
+            android:name=".receiver.AlarmTriggerReceiver"
+            android:directBootAware="true"
+            android:exported="false" />
+
+        <!-- Re-registers everything after reboots, updates, clock/time-zone changes and permission changes. -->
+        <receiver
+            android:name=".receiver.BootReceiver"
+            android:directBootAware="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.LOCKED_BOOT_COMPLETED" />
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+                <action android:name="android.intent.action.TIME_SET" />
+                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+                <action android:name="android.app.action.SCHEDULE_EXACT_ALARM_PERMISSION_STATE_CHANGED" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Snooze / dismiss / "dismiss now" buttons of the engine's notifications. -->
+        <receiver
+            android:name=".receiver.NotificationActionReceiver"
+            android:directBootAware="true"
+            android:exported="false" />
+
+        <!-- Plays the alarm. systemExempted: alarm apps holding USE_EXACT_ALARM. mediaPlayback is the fallback type. -->
+        <service
+            android:name=".ring.AlarmRingService"
+            android:directBootAware="true"
+            android:exported="false"
+            android:foregroundServiceType="systemExempted|mediaPlayback" />
+
+        <!-- Optional always-on guard (user setting) against aggressive battery management. -->
+        <service
+            android:name=".guard.AlarmGuardService"
+            android:directBootAware="true"
+            android:exported="false"
+            android:foregroundServiceType="specialUse">
+            <property
+                android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
+                android:value="Keeps alarms reliable on devices with aggressive battery management" />
+        </service>
+
+        <!--
+            WorkManager keeps its database in credential-encrypted storage, so its default startup
+            initializer crashes when the app process starts in Direct Boot. The engine initializes
+            WorkManager on demand instead, and only once the user has unlocked the device
+            (see work/Watchdog.kt). If the Application implements androidx.work.Configuration.Provider,
+            that configuration is used.
+        -->
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="${applicationId}.androidx-startup"
+            android:exported="false"
+            tools:node="merge">
+            <meta-data
+                android:name="androidx.work.WorkManagerInitializer"
+                android:value="androidx.startup"
+                tools:node="remove" />
+        </provider>
+    </application>
 </manifest>
