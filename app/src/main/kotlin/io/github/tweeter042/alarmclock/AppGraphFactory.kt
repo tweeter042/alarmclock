@@ -2,6 +2,9 @@ package io.github.tweeter042.alarmclock
 
 import android.content.Context
 import android.util.Log
+import io.github.tweeter042.alarmclock.core.alarm.DefaultAlarmEngine
+import io.github.tweeter042.alarmclock.core.alarm.EngineDependencies
+import io.github.tweeter042.alarmclock.core.alarm.reliability.DefaultReliabilityChecker
 import io.github.tweeter042.alarmclock.core.data.DataGraph
 import io.github.tweeter042.alarmclock.core.model.AppGraph
 import io.github.tweeter042.alarmclock.core.model.engine.AlarmEngine
@@ -33,8 +36,10 @@ import io.github.tweeter042.alarmclock.core.model.service.Speaker
 import io.github.tweeter042.alarmclock.core.model.service.WeatherProvider
 import io.github.tweeter042.alarmclock.core.model.service.WearBridge
 import io.github.tweeter042.alarmclock.core.model.theme.AppIconController
+import io.github.tweeter042.alarmclock.engine.AppRingUiLauncher
+import io.github.tweeter042.alarmclock.engine.CompositeEngineHooks
+import io.github.tweeter042.alarmclock.engine.WidgetRefreshHooks
 import io.github.tweeter042.alarmclock.icon.AppIconSwitcher
-import io.github.tweeter042.alarmclock.stub.NoOpAlarmEngine
 import io.github.tweeter042.alarmclock.stub.NoOpBriefingComposer
 import io.github.tweeter042.alarmclock.stub.NoOpCalendarSource
 import io.github.tweeter042.alarmclock.stub.NoOpHealthSleepSource
@@ -42,7 +47,6 @@ import io.github.tweeter042.alarmclock.stub.NoOpHolidayProvider
 import io.github.tweeter042.alarmclock.stub.NoOpMusicLauncher
 import io.github.tweeter042.alarmclock.stub.NoOpNewsProvider
 import io.github.tweeter042.alarmclock.stub.NoOpQuoteProvider
-import io.github.tweeter042.alarmclock.stub.NoOpReliabilityChecker
 import io.github.tweeter042.alarmclock.stub.NoOpSmartHomeController
 import io.github.tweeter042.alarmclock.stub.NoOpSpeaker
 import io.github.tweeter042.alarmclock.stub.NoOpWearBridge
@@ -55,23 +59,34 @@ import kotlinx.coroutines.SupervisorJob
 /**
  * Builds the app's [AppGraph].
  *
- * Wired today: build info, the app scope, every core:data repository, backup and changelog, and
- * the launcher icon switcher. Engine, reliability, integrations and connected devices are still
- * the temporary `stub.NoOp*` stand-ins; the integration wave passes the real ones here.
+ * Wired today: build info, the app scope, every core:data repository, backup and changelog, the
+ * launcher icon switcher, the real alarm engine (core:alarm) and its reliability checker.
+ * Integrations and connected devices are still the temporary `stub.NoOp*` stand-ins; the
+ * integration wave passes the real ones here (and into [EngineDependencies]).
  */
 object AppGraphFactory {
     private const val TAG = "AlarmClock/App"
 
-    fun create(context: Context): AppGraph {
+    internal fun create(context: Context): DefaultAppGraph {
         val app = context.applicationContext ?: context
         val buildInfo = buildInfo()
+        val data = DataGraph(app, buildInfo.versionName)
+        val engine = DefaultAlarmEngine(
+            app,
+            data,
+            EngineDependencies(
+                hooks = CompositeEngineHooks(listOf(WidgetRefreshHooks(app))),
+                ringUi = AppRingUiLauncher,
+                buildInfo = buildInfo,
+            ),
+        )
         return DefaultAppGraph(
             buildInfo = buildInfo,
             appScope = newAppScope(),
-            data = DataGraph(app, buildInfo.versionName),
+            data = data,
             appIcons = AppIconSwitcher(app),
-            engine = NoOpAlarmEngine(),
-            reliability = NoOpReliabilityChecker(),
+            alarmEngine = engine,
+            reliability = DefaultReliabilityChecker(app, data, engine),
             weather = NoOpWeatherProvider(),
             holidayProvider = NoOpHolidayProvider(),
             calendar = NoOpCalendarSource(),
@@ -110,7 +125,8 @@ internal class DefaultAppGraph(
     override val appScope: CoroutineScope,
     private val data: DataGraph,
     override val appIcons: AppIconController,
-    override val engine: AlarmEngine,
+    /** The concrete engine (receivers and services reach it through AlarmEngineHost). */
+    val alarmEngine: DefaultAlarmEngine,
     override val reliability: ReliabilityChecker,
     override val weather: WeatherProvider,
     override val holidayProvider: HolidayProvider,
@@ -124,6 +140,7 @@ internal class DefaultAppGraph(
     override val health: HealthSleepSource,
     override val music: MusicLauncher,
 ) : AppGraph {
+    override val engine: AlarmEngine get() = alarmEngine
     override val settings: SettingsRepository get() = data.settings
     override val secrets: SecretStore get() = data.secrets
     override val alarms: AlarmRepository get() = data.alarms

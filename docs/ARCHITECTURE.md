@@ -118,7 +118,25 @@ members **with default implementations**). Anything else must be raised in your 
 - `feature/widgets/WidgetsApi.kt`: `WidgetsApi.refreshAll(context)`.
 - Each feature's `fun NavGraphBuilder.<feature>Graph(navController: NavHostController)`.
 
-### 4.3 Dependency access
+### 4.3 Module guides (read the one you build on)
+
+- `core/designsystem/README.md` — themes, tokens, components, clock faces, fonts, icons.
+- `core/ui/README.md` — `AlarmClockAppRoot` / `AlarmClockRingRoot` (every activity's root),
+  `UiFormatters` (time, durations, day names, repeat summaries in EN/TH with Thai numerals and
+  Buddhist year), pickers (time/date/duration), permission helpers, `TopLevelActions`,
+  `NextAlarmBanner`, `ErrorState` (shows `LocalizedError`), `appViewModel { graph -> … }`.
+- `core/alarm/README.md` — how the ring screen, timers, watch bridge and app use the engine.
+
+Opening the main activity from anywhere: `core.ui.navigation.MainIntents` —
+`main(ctx)`, `openAlarm(ctx, id)`, `openRoute(ctx, MainIntents.ROUTE_*)` (`new_alarm`, `timer`,
+`stopwatch`, `bedside`, `sleep`, `world_clock`, `settings`, `reliability`), `newAlarm(ctx, h, m)`.
+Onboarding ends by setting `settings.onboardingCompleted = true` (the shell switches to the alarm
+list). Top-level screens put `TopLevelActions(navController)` in `AppScaffold(actions = …)`; the
+bottom bar belongs to the shell. Launcher entries are `<activity-alias>`es (one per
+`AppIconVariant`); app shortcuts meta-data goes on every alias. Notification small icon for every
+module: `@drawable/ds_ic_notification` (core:designsystem).
+
+### 4.4 Dependency access
 
 - In Compose: `val graph = LocalAppGraph.current`. Outside Compose: `context.appGraph()` (both from core:ui).
 - ViewModels: `viewModel { MyViewModel(graph.alarms, graph.engine) }` (androidx `viewModel(initializer)`),

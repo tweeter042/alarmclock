@@ -15,7 +15,7 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:localeConfig="@xml/locales_config"
-        android:roundIcon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AlarmClock">
 
@@ -37,7 +37,7 @@
             android:enabled="true"
             android:exported="true"
             android:icon="@mipmap/ic_launcher"
-            android:roundIcon="@mipmap/ic_launcher"
+            android:roundIcon="@mipmap/ic_launcher_round"
             android:targetActivity=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -45,13 +45,13 @@
             </intent-filter>
         </activity-alias>
 
-        <!-- TEMPORARY: the alternative icons (@mipmap/ic_launcher_alt_<id>) are swapped in at integration. -->
+        <!-- Alternative icons (core:designsystem res/mipmap-anydpi/ic_launcher_alt_<id>). -->
         <activity-alias
             android:name=".launcher.Midnight"
             android:enabled="false"
             android:exported="true"
-            android:icon="@mipmap/ic_launcher"
-            android:roundIcon="@mipmap/ic_launcher"
+            android:icon="@mipmap/ic_launcher_alt_midnight"
+            android:roundIcon="@mipmap/ic_launcher_alt_midnight"
             android:targetActivity=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -63,8 +63,8 @@
             android:name=".launcher.Daylight"
             android:enabled="false"
             android:exported="true"
-            android:icon="@mipmap/ic_launcher"
-            android:roundIcon="@mipmap/ic_launcher"
+            android:icon="@mipmap/ic_launcher_alt_daylight"
+            android:roundIcon="@mipmap/ic_launcher_alt_daylight"
             android:targetActivity=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -76,8 +76,8 @@
             android:name=".launcher.Neon"
             android:enabled="false"
             android:exported="true"
-            android:icon="@mipmap/ic_launcher"
-            android:roundIcon="@mipmap/ic_launcher"
+            android:icon="@mipmap/ic_launcher_alt_neon"
+            android:roundIcon="@mipmap/ic_launcher_alt_neon"
             android:targetActivity=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

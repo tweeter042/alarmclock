@@ -8,10 +8,10 @@ import androidx.compose.ui.test.junit4.createEmptyComposeRule
 import androidx.compose.ui.test.onNodeWithText
 import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
+import io.github.tweeter042.alarmclock.core.alarm.DefaultAlarmEngine
+import io.github.tweeter042.alarmclock.core.alarm.reliability.DefaultReliabilityChecker
 import io.github.tweeter042.alarmclock.core.model.settings.AppLanguage
 import io.github.tweeter042.alarmclock.icon.AppIconSwitcher
-import io.github.tweeter042.alarmclock.stub.NoOpAlarmEngine
-import io.github.tweeter042.alarmclock.stub.NoOpReliabilityChecker
 import kotlinx.coroutines.runBlocking
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNull
@@ -42,7 +42,7 @@ class RealAppSmokeTest {
         val app = ApplicationProvider.getApplicationContext<AlarmClockApplication>()
         val graph = app.appGraph
 
-        // Wiring: build info from BuildConfig, core:data repositories, NoOp stand-ins.
+        // Wiring: build info from BuildConfig, core:data repositories, the real engine.
         assertEquals(BuildConfig.APPLICATION_ID, graph.buildInfo.applicationId)
         assertEquals(BuildConfig.VERSION_CODE, graph.buildInfo.versionCode)
         assertEquals(BuildConfig.VERSION_NAME, graph.buildInfo.versionName)
@@ -52,14 +52,16 @@ class RealAppSmokeTest {
             assertTrue(it.javaClass.name, it.javaClass.name.startsWith("io.github.tweeter042.alarmclock.core.data."))
         }
         assertTrue(graph.appIcons is AppIconSwitcher)
-        assertTrue(graph.engine is NoOpAlarmEngine)
-        assertTrue(graph.reliability is NoOpReliabilityChecker)
+        assertTrue(graph.engine is DefaultAlarmEngine)
+        assertTrue("one engine per process", graph.engine === app.alarmEngine)
+        assertTrue(graph.reliability is DefaultReliabilityChecker)
         assertNull(graph.engine.activeRing.value)
-        assertNull(graph.engine.nextAlarm.value)
         runBlocking {
             val before = System.currentTimeMillis()
             val triggerAt = graph.engine.startNap(20)
             assertTrue(triggerAt >= before + 20 * 60_000L)
+            val alarmManager = app.getSystemService(android.app.AlarmManager::class.java)
+            assertEquals("the nap is registered with AlarmManager", triggerAt, alarmManager.nextAlarmClock?.triggerTime)
             assertTrue("the bundled changelog is readable", graph.changelog.entryFor(BuildConfig.VERSION_CODE) != null)
         }
 

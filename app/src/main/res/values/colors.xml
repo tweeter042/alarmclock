@@ -2,6 +2,6 @@
 <resources>
     <!-- Page colour of the default theme (Minimal · Mono, light). -->
     <color name="app_window_background">#FFF7F7F5</color>
-    <!-- Background of the launcher icon (drawable/ic_launcher_background); keep them equal. -->
-    <color name="app_splash_background">#FF111111</color>
+    <!-- Splash background = the launcher icon's base colour (core:designsystem ds_splash_background). -->
+    <color name="app_splash_background">@color/ds_splash_background</color>
 </resources>
