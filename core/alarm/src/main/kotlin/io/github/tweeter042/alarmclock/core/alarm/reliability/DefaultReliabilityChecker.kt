@@ -1,5 +1,6 @@
 package io.github.tweeter042.alarmclock.core.alarm.reliability
 
+import android.annotation.SuppressLint
 import android.app.ActivityManager
 import android.app.AlarmManager
 import android.app.NotificationManager
@@ -198,6 +199,8 @@ class DefaultReliabilityChecker(
         required = id in REQUIRED,
     )
 
+    // Sideloaded alarm clock: asking for the battery-optimization exemption is the point of this item.
+    @SuppressLint("BatteryLife")
     override fun fixIntents(context: Context, id: HealthItemId): List<Intent> {
         val packageName = context.packageName
         val packageUri = Uri.fromParts("package", packageName, null)

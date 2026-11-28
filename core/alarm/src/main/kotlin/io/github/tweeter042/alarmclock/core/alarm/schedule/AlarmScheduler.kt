@@ -1,5 +1,6 @@
 package io.github.tweeter042.alarmclock.core.alarm.schedule
 
+import android.annotation.SuppressLint
 import android.app.AlarmManager
 import android.app.PendingIntent
 import android.content.Context
@@ -27,6 +28,8 @@ internal class AlarmScheduler(
 
     fun canScheduleExact(): Boolean = runCatching { alarmManager?.canScheduleExactAlarms() ?: false }.getOrDefault(false)
 
+    // USE_EXACT_ALARM is declared (an alarm clock, granted at install); a SecurityException still falls back below.
+    @SuppressLint("MissingPermission")
     fun register(trigger: ScheduledTrigger, method: RegisterMethod, label: String) {
         val manager = alarmManager ?: return
         val operation = PendingIntent.getBroadcast(

@@ -140,7 +140,7 @@ internal class RingSession(
         val sound = ring.alarm.sound
         val vibration = ring.alarm.vibration
         if (!sound.vibrateOnly) {
-            if (sound.overrideSystemVolume) engine.volume.applyPercent(sound.volumePercent) else engine.volume.ensureAudible()
+            applyVolumePolicy(sound.overrideSystemVolume, sound.volumePercent)
             targetGain = VolumeMath.targetGain(sound)
             fadeMillis = sound.fadeInSeconds.coerceIn(0, MAX_FADE_SECONDS) * 1_000L
             val plan = withContext(Dispatchers.IO) {
@@ -159,6 +159,19 @@ internal class RingSession(
         if (vibration.enabled || sound.vibrateOnly) {
             vibrator.start(vibration.pattern)
             vibrating = true
+        }
+    }
+
+    /**
+     * overrideSystemVolume: alarm stream to the alarm's level. Otherwise the user's own alarm volume
+     * applies — undo an override left by a previous ring of this service — but never muted.
+     */
+    private fun applyVolumePolicy(override: Boolean, percent: Int) {
+        if (override) {
+            engine.volume.applyPercent(percent)
+        } else {
+            engine.volume.restore()
+            engine.volume.ensureAudible()
         }
     }
 
@@ -252,7 +265,7 @@ internal class RingSession(
     // --- awake check ----------------------------------------------------------------------------
 
     private fun startAwakePing() {
-        engine.volume.ensureAudible()
+        applyVolumePolicy(override = false, percent = 0)
         targetGain = VolumeMath.AWAKE_PING_GAIN
         fadeMillis = 0L
         audibleSince = SystemClock.elapsedRealtime()

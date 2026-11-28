@@ -3,6 +3,7 @@ package io.github.tweeter042.alarmclock.core.alarm.ring
 import android.content.ContentResolver
 import android.content.Context
 import android.net.Uri
+import androidx.core.net.toUri
 import io.github.tweeter042.alarmclock.core.alarm.EngineLog
 import io.github.tweeter042.alarmclock.core.alarm.internal.EnginePrefs
 import io.github.tweeter042.alarmclock.core.model.alarm.BuiltInTones
@@ -51,7 +52,7 @@ internal class SoundSourceResolver(private val context: Context, private val pre
         return readable.map { it.second }.take(MAX_CANDIDATES)
     }
 
-    private fun parse(uri: String): Uri? = runCatching { Uri.parse(uri) }.getOrNull()?.takeIf { it.scheme != null }
+    private fun parse(uri: String): Uri? = runCatching { uri.toUri() }.getOrNull()?.takeIf { it.scheme != null }
 
     /** True if the content can be opened right now (permission, file present, provider available). */
     private fun isReadable(uri: Uri): Boolean = try {

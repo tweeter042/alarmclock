@@ -243,7 +243,8 @@ internal class RingCoordinator(
         if (payload.kind == TriggerKind.AWAKE_CHECK && event?.awakeConfirmed == true) return TriggerResult.SKIPPED
         log.w("${payload.kind} for an unknown ring; ringing its ${payload.ringKind} source again")
         val ring = ActiveRing(
-            ringId = newRingId(),
+            // Same id: the full-screen intent already posted for this trigger and the watch know it.
+            ringId = ringId ?: newRingId(),
             kind = payload.ringKind,
             sourceId = payload.sourceId,
             alarm = resolver.configFor(payload.ringKind, payload.sourceId, payload),

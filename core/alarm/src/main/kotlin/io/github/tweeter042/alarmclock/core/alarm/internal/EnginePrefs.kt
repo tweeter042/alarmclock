@@ -1,5 +1,6 @@
 package io.github.tweeter042.alarmclock.core.alarm.internal
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.SharedPreferences
 import android.provider.Settings
@@ -44,6 +45,8 @@ internal class EnginePrefs(context: Context) {
             null
         }
 
+    /** [commit] = write synchronously: the saved alarm volume must survive a process death right after. */
+    @SuppressLint("ApplySharedPref")
     private inline fun write(commit: Boolean = false, block: SharedPreferences.Editor.() -> Unit) {
         try {
             val editor = prefs.edit().apply(block)

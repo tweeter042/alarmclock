@@ -248,6 +248,8 @@ class DefaultAlarmEngine internal constructor(
         if (rings.book.value.sounding != null) rings.ensureService("app foreground")
         guarded("Integrity check", INTEGRITY_TIMEOUT_MILLIS, log) { schedule.integrityReport(repair = true) }
         Watchdog.enqueueIfUnlocked(appContext)
+        // A guard that could not start from the background can start now.
+        syncGuard(env.settings().reliability.guardServiceEnabled)
     }
 
     /** Boot, package replaced, time / time-zone change, exact-alarm permission change. */
@@ -268,7 +270,11 @@ class DefaultAlarmEngine internal constructor(
     }
 
     private fun syncGuard(enabled: Boolean) {
-        if (enabled) AlarmGuardService.start(appContext) else AlarmGuardService.stop(appContext)
+        if (enabled) {
+            if (!AlarmGuardService.isRunning) AlarmGuardService.start(appContext)
+        } else {
+            AlarmGuardService.stop(appContext)
+        }
     }
 
     /** At start / boot: ring alarms missed within the grace period, report older ones. */
