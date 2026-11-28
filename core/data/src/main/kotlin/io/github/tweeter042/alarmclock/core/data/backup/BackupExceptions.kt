@@ -2,17 +2,19 @@ package io.github.tweeter042.alarmclock.core.data.backup
 
 import androidx.annotation.StringRes
 import io.github.tweeter042.alarmclock.core.data.R
+import io.github.tweeter042.alarmclock.core.model.util.LocalizedError
 import java.io.IOException
 
 /**
  * Every failure returned by the backup manager (as `Result.failure`) is one of these.
  *
  * [message] is a technical English description for logs; [messageRes] is a localized, user-facing
- * explanation (English and Thai) that UI code can show directly.
+ * explanation (English and Thai) that UI code can show directly. UI modules that cannot depend on
+ * core:data use the [LocalizedError] interface from core:model.
  */
-sealed class BackupException(message: String, cause: Throwable? = null) : IOException(message, cause) {
+sealed class BackupException(message: String, cause: Throwable? = null) : IOException(message, cause), LocalizedError {
     @get:StringRes
-    abstract val messageRes: Int
+    abstract override val messageRes: Int
 }
 
 /** The input is not an Alarm Clock backup: not JSON, wrong `format`, or damaged content. */

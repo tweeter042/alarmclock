@@ -162,6 +162,11 @@ members **with default implementations**). Anything else must be raised in your 
   app start, boot, time change, package replaced).
 - Never let an exception in an integration (weather, SmartThings, TTS, watch) stop or delay a ring:
   wrap hooks with timeouts and catch-all logging.
+- Every component that touches `DataGraph` data (activities, receivers, services, workers, tiles,
+  widgets) runs in the app's default process — never set `android:process`: Room/DataStore change
+  notifications are per process.
+- Errors shown to users implement `core.model.util.LocalizedError` (string resource id), e.g. backup
+  failures, so any UI module can display them in English or Thai.
 
 ### 5.4 Kotlin & architecture
 
