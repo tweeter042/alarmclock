@@ -383,27 +383,38 @@ internal class RingCoordinator(
             when {
                 sounding.state == RingState.RINGING -> {
                     val duration = sounding.alarm.dismiss.ringDurationMinutes.coerceAtLeast(1) * MINUTE
-                    val at = maxOf(sounding.startedAt + duration, armedAt + MIN_RING_LEFT_MILLIS)
-                    delay(at - env.clock.now())
+                    waitUntil(maxOf(sounding.startedAt + duration, armedAt + MIN_RING_LEFT_MILLIS))
                     fire(RingInput.RingTimeout(sounding.ringId), key)
                 }
                 sounding.state == RingState.MISSION && sounding.alarm.dismiss.lowerVolumeDuringMission -> {
                     val idle = sounding.alarm.dismiss.missionIdleTimeoutSeconds.coerceAtLeast(MIN_IDLE_SECONDS) * 1_000L
                     lastInteraction.putIfAbsent(sounding.ringId, armedAt)
+                    // Every interaction moves the deadline.
                     while (true) {
-                        val remaining = (lastInteraction[sounding.ringId] ?: armedAt) + idle - env.clock.now()
-                        if (remaining <= 0) break
-                        delay(remaining)
+                        val deadline = (lastInteraction[sounding.ringId] ?: armedAt) + idle
+                        if (env.clock.now() >= deadline) break
+                        waitUntil(deadline)
                     }
                     fire(RingInput.MissionIdle(sounding.ringId), key)
                 }
                 sounding.state == RingState.AWAKE_CHECK && sounding.awakePromptShowing -> {
                     val answer = sounding.alarm.awakeCheck.responseSeconds.coerceAtLeast(MIN_AWAKE_SECONDS) * 1_000L
-                    val at = maxOf(sounding.startedAt + answer, armedAt + MIN_AWAKE_SECONDS * 1_000L)
-                    delay(at - env.clock.now())
+                    waitUntil(maxOf(sounding.startedAt + answer, armedAt + MIN_AWAKE_SECONDS * 1_000L))
                     fire(RingInput.AwakeTimeout(sounding.ringId), key)
                 }
             }
+        }
+    }
+
+    /**
+     * Waits until the engine clock reaches [at], re-checking at least every second: deadlines follow
+     * the wall clock (and its changes) rather than one long sleep. The CPU is awake anyway (ring wake lock).
+     */
+    private suspend fun waitUntil(at: Long) {
+        while (true) {
+            val remaining = at - env.clock.now()
+            if (remaining <= 0) return
+            delay(remaining.coerceAtMost(TIMER_TICK_MILLIS))
         }
     }
 
@@ -550,6 +561,7 @@ internal class RingCoordinator(
         private const val SERVICE_RETRY_MILLIS = 3_000L
         const val KICK_DELAY_MILLIS = 1_000L
         private const val MAX_KICKS = 5
+        private const val TIMER_TICK_MILLIS = 1_000L
 
         fun newRingId(): String = UUID.randomUUID().toString()
     }

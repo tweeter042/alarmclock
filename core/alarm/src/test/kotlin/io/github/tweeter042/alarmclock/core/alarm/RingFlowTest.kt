@@ -392,7 +392,7 @@ class RingFlowTest {
         idleMain()
         eventually { assertEquals(RingState.SNOOZED, engine.activeRing.value?.state) }
 
-        val snoozedNotice = notifications.single { it.channelId == EngineChannels.SNOOZED }
+        val snoozedNotice = eventually { notifications.single { it.channelId == EngineChannels.SNOOZED } }
         snoozedNotice.actions.single().actionIntent.send()
         idleMain()
         eventually { assertNull(engine.activeRing.value) }
