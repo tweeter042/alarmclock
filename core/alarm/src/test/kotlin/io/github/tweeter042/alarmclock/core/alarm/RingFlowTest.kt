@@ -1,3 +1,5 @@
+@file:Suppress("DEPRECATION") // ShadowAlarmManager exposes the PendingIntent only as a deprecated field.
+
 package io.github.tweeter042.alarmclock.core.alarm
 
 import android.app.Notification
@@ -101,7 +103,7 @@ class RingFlowTest {
         val snoozeEnd = ledger().single { it.kind == TriggerKind.SNOOZE_END }
         assertEquals(ring.ringId, snoozeEnd.extraPayload?.ringId)
         assertEquals(snoozed.snoozedUntil, snoozeEnd.triggerAt)
-        assertTrue(rule.shadowAlarms.scheduledAlarms.any { it.alarmClockInfo != null && it.triggerAtTime == snoozed.snoozedUntil })
+        assertTrue(rule.shadowAlarms.scheduledAlarms.any { it.alarmClockInfo != null && it.triggerAtMs == snoozed.snoozedUntil })
         assertTrue(notifications.any { it.channelId == EngineChannels.SNOOZED })
         eventually { assertEquals(snoozed.snoozedUntil, engine.nextAlarm.value?.triggerAt) }
         assertEquals(1, events().single().snoozeCount)
@@ -404,7 +406,7 @@ class RingFlowTest {
         runBlocking { engine.triggerNow(RingKind.ALARM, alarm.id, alarm) }
         val notification = engine.notifier.ring(engine.activeRing.value!!, engine.settingsSnapshot())
         val dismiss = notification.actions.last().actionIntent
-        assertTrue("dismiss opens the ring screen", shadowOf(dismiss).isActivityIntent)
+        assertTrue("dismiss opens the ring screen", shadowOf(dismiss).isActivity)
         assertEquals(TestRingUi.RING_ACTIVITY, shadowOf(dismiss).savedIntent.component?.className)
     }
 

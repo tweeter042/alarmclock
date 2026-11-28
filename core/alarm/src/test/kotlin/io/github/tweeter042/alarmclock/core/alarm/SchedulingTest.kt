@@ -1,3 +1,5 @@
+@file:Suppress("DEPRECATION") // ShadowAlarmManager exposes the PendingIntent only as a deprecated field.
+
 package io.github.tweeter042.alarmclock.core.alarm
 
 import android.app.NotificationManager
@@ -61,11 +63,11 @@ class SchedulingTest {
         val occurrence = clock.at(2026, 11, 27, 9, 30)
 
         val ring = alarmClocks().single { requestCodeOf(it) == RequestCodes.preferred(TriggerIdentities.ring(id)) }
-        assertEquals(occurrence, ring.triggerAtTime)
+        assertEquals(occurrence, ring.triggerAtMs)
         assertEquals(app.packageName, ring.alarmClockInfo!!.showIntent.creatorPackage)
         val exact = scheduled().filter { it.alarmClockInfo == null }
         assertTrue("pre-alarm events are allow-while-idle", exact.all { it.isAllowWhileIdle })
-        val preTimes = exact.map { it.triggerAtTime }.toSet()
+        val preTimes = exact.map { it.triggerAtMs }.toSet()
         assertTrue(clock.at(2026, 11, 27, 8, 30) in preTimes) // upcoming notice, 60 min
         assertTrue(clock.at(2026, 11, 27, 9, 15) in preTimes) // sunrise, 15 min
         assertTrue(clock.at(2026, 11, 27, 9, 20) in preTimes) // prefetch, 10 min
@@ -104,11 +106,11 @@ class SchedulingTest {
 
         val id = runBlocking { app.data.alarms.upsert(weekday(9, 30)) }
         val code = RequestCodes.preferred(TriggerIdentities.ring(id))
-        eventually { assertEquals(clock.at(2026, 11, 27, 9, 30), alarmClocks().single { requestCodeOf(it) == code }.triggerAtTime) }
+        eventually { assertEquals(clock.at(2026, 11, 27, 9, 30), alarmClocks().single { requestCodeOf(it) == code }.triggerAtMs) }
         eventually { assertEquals(id, engine.nextAlarm.value?.sourceId) }
 
         runBlocking { app.data.alarms.update(id) { it.copy(time = AlarmTime(10, 15)) } }
-        eventually { assertEquals(clock.at(2026, 11, 27, 10, 15), alarmClocks().single { requestCodeOf(it) == code }.triggerAtTime) }
+        eventually { assertEquals(clock.at(2026, 11, 27, 10, 15), alarmClocks().single { requestCodeOf(it) == code }.triggerAtMs) }
 
         runBlocking { app.data.alarms.setEnabled(id, false) }
         eventually { assertTrue(scheduled().none { requestCodeOf(it) == code }) }
@@ -134,10 +136,10 @@ class SchedulingTest {
         val engine = rule.startEngine()
         val code = RequestCodes.preferred(TriggerIdentities.ring(id))
         runBlocking { engine.skipNext(id) }
-        eventually { assertEquals(clock.at(2026, 11, 30, 9, 0), alarmClocks().single { requestCodeOf(it) == code }.triggerAtTime) }
+        eventually { assertEquals(clock.at(2026, 11, 30, 9, 0), alarmClocks().single { requestCodeOf(it) == code }.triggerAtMs) }
         assertEquals(clock.at(2026, 11, 27, 9, 0), runBlocking { app.data.alarms.getAlarm(id) }?.skippedOccurrenceAt)
         runBlocking { engine.clearSkip(id) }
-        eventually { assertEquals(clock.at(2026, 11, 27, 9, 0), alarmClocks().single { requestCodeOf(it) == code }.triggerAtTime) }
+        eventually { assertEquals(clock.at(2026, 11, 27, 9, 0), alarmClocks().single { requestCodeOf(it) == code }.triggerAtMs) }
     }
 
     @Test fun theBootReceiverRegistersEverythingAgain() {
@@ -187,12 +189,12 @@ class SchedulingTest {
         val nap = runBlocking { app.data.scheduleLedger.all() }.single { it.kind == TriggerKind.NAP }
         assertEquals(napAt, nap.sourceId)
         assertNotNull(nap.extraPayload?.alarm)
-        assertTrue(alarmClocks().any { it.triggerAtTime == napAt })
+        assertTrue(alarmClocks().any { it.triggerAtMs == napAt })
         eventually { assertEquals(RingKind.NAP, engine.nextAlarm.value?.kind) }
 
         val timerId = runBlocking { app.data.timers.upsert(TimerModel(durationMs = 300_000, state = TimerState.RUNNING, endAt = clock.now + 300_000)) }
         runBlocking { engine.scheduleTimer(timerId, clock.now + 300_000) }
-        assertTrue(alarmClocks().any { requestCodeOf(it) == RequestCodes.preferred(TriggerIdentities.timer(timerId)) && it.triggerAtTime == clock.now + 300_000 })
+        assertTrue(alarmClocks().any { requestCodeOf(it) == RequestCodes.preferred(TriggerIdentities.timer(timerId)) && it.triggerAtMs == clock.now + 300_000 })
         assertEquals("timers are not the next alarm", RingKind.NAP, engine.nextAlarm.value?.kind)
         runBlocking { engine.cancelTimer(timerId) }
         assertTrue(scheduled().none { requestCodeOf(it) == RequestCodes.preferred(TriggerIdentities.timer(timerId)) })
@@ -201,7 +203,7 @@ class SchedulingTest {
         runBlocking { engine.testRing(Alarm(label = "Test"), delaySeconds = 3) }
         val test = runBlocking { app.data.scheduleLedger.all() }.single { it.kind == TriggerKind.TEST }
         assertEquals(clock.now + 3_000, test.triggerAt)
-        assertTrue(alarmClocks().any { it.triggerAtTime == clock.now + 3_000 })
+        assertTrue(alarmClocks().any { it.triggerAtMs == clock.now + 3_000 })
     }
 
     @Test fun dismissingInAdvanceSkipsThatOccurrence() {
@@ -209,7 +211,7 @@ class SchedulingTest {
         val engine = rule.startEngine()
         runBlocking { engine.dismissUpcoming(id) }
         val code = RequestCodes.preferred(TriggerIdentities.ring(id))
-        eventually { assertEquals(clock.at(2026, 11, 30, 9, 0), alarmClocks().single { requestCodeOf(it) == code }.triggerAtTime) }
+        eventually { assertEquals(clock.at(2026, 11, 30, 9, 0), alarmClocks().single { requestCodeOf(it) == code }.triggerAtMs) }
         val events = runBlocking { app.data.events.between(0, Long.MAX_VALUE) }
         assertEquals(io.github.tweeter042.alarmclock.core.model.alarm.RingOutcome.DISMISSED_IN_ADVANCE, events.single().outcome)
         assertEquals(clock.at(2026, 11, 27, 9, 0), events.single().occurrenceAt)
