@@ -6,6 +6,16 @@ plugins {
 
 android {
     namespace = "io.github.tweeter042.alarmclock.core.ui"
+
+    testOptions {
+        unitTests.all {
+            // Roborazzi without its Gradle plugin: always record, PNGs go to build/screenshots-out/.
+            it.systemProperty("roborazzi.test.record", "true")
+            // Hardware-accelerated pixel copy so elevation and blur render like on a device.
+            it.systemProperty("robolectric.pixelCopyRenderMode", "hardware")
+            it.maxHeapSize = "3g"
+        }
+    }
 }
 
 dependencies {
