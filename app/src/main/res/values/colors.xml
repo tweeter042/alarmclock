@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Page colour of the default theme (Minimal · Mono, light). -->
+    <color name="app_window_background">#FFF7F7F5</color>
+    <!-- Background of the launcher icon (drawable/ic_launcher_background); keep them equal. -->
+    <color name="app_splash_background">#FF111111</color>
+</resources>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- แท็กภาษาของชุดข้อความนี้ (AppLocales ใช้ตรวจว่า UI แสดงภาษาอะไรจริง) -->
+    <string name="ui_language_tag">th</string>
+
+    <!-- รูปแบบวันที่ (ไวยากรณ์ DateTimeFormatter ข้อความคงที่อยู่ใน ' ')
+         ตัวอักษรปี (y) จะถูกแทนด้วยปีที่แสดง (พ.ศ. หากเลือกไว้) -->
+    <string name="ui_pattern_date_short">EEE d MMM</string>
+    <string name="ui_pattern_date_short_year">EEE d MMM y</string>
+    <string name="ui_pattern_day_month">d MMM</string>
+    <string name="ui_pattern_day_month_year">d MMM y</string>
+    <string name="ui_pattern_date_long">EEEE\'ที่\' d MMMM y</string>
+    <string name="ui_pattern_date_long_no_year">EEEE\'ที่\' d MMMM</string>
+    <string name="ui_pattern_month_year">MMMM y</string>
+
+    <!-- เวลา: %1$s = "7:30", %2$s = ก่อนเที่ยง/หลังเที่ยง -->
+    <string name="ui_time_with_am_pm">%1$s %2$s</string>
+    <!-- %1$s = "พรุ่งนี้" / "วันพุธ" / "พ. 25 พ.ย.", %2$s = "07:00" -->
+    <string name="ui_day_at_time">%1$s เวลา %2$s</string>
+    <string name="ui_today">วันนี้</string>
+    <string name="ui_tomorrow">พรุ่งนี้</string>
+    <string name="ui_yesterday">เมื่อวาน</string>
+
+    <!-- ชื่อวันแบบย่อ เรียงแบบ ISO (1 = วันจันทร์) -->
+    <string name="ui_day_short_1">จ.</string>
+    <string name="ui_day_short_2">อ.</string>
+    <string name="ui_day_short_3">พ.</string>
+    <string name="ui_day_short_4">พฤ.</string>
+    <string name="ui_day_short_5">ศ.</string>
+    <string name="ui_day_short_6">ส.</string>
+    <string name="ui_day_short_7">อา.</string>
+    <!-- ตัวคั่นรายการ ("จ. พ. ศ.") -->
+    <string name="ui_list_separator">" "</string>
+
+    <!-- ระยะเวลา หน่วยแบบย่อ ("7 ชม. 23 นาที") -->
+    <plurals name="ui_unit_days_short">
+        <item quantity="other">%1$d วัน</item>
+    </plurals>
+    <plurals name="ui_unit_hours_short">
+        <item quantity="other">%1$d ชม.</item>
+    </plurals>
+    <plurals name="ui_unit_minutes_short">
+        <item quantity="other">%1$d นาที</item>
+    </plurals>
+    <plurals name="ui_unit_seconds_short">
+        <item quantity="other">%1$d วินาที</item>
+    </plurals>
+    <!-- ระยะเวลา หน่วยเต็ม (สำหรับโปรแกรมอ่านหน้าจอ) -->
+    <plurals name="ui_unit_days_long">
+        <item quantity="other">%1$d วัน</item>
+    </plurals>
+    <plurals name="ui_unit_hours_long">
+        <item quantity="other">%1$d ชั่วโมง</item>
+    </plurals>
+    <plurals name="ui_unit_minutes_long">
+        <item quantity="other">%1$d นาที</item>
+    </plurals>
+    <plurals name="ui_unit_seconds_long">
+        <item quantity="other">%1$d วินาที</item>
+    </plurals>
+    <string name="ui_duration_join">" "</string>
+    <string name="ui_duration_join_last">" "</string>
+    <string name="ui_duration_less_than_minute">ไม่ถึง 1 นาที</string>
+    <!-- %1$s = "7 ชม. 23 นาที" -->
+    <string name="ui_relative_in">อีก %1$s</string>
+    <string name="ui_relative_ago">%1$sที่แล้ว</string>
+    <string name="ui_relative_in_less_than_minute">อีกไม่ถึง 1 นาที</string>
+    <string name="ui_relative_just_now">เมื่อสักครู่</string>
+
+    <!-- สรุปการปลุกซ้ำ -->
+    <string name="ui_repeat_once">ครั้งเดียว</string>
+    <string name="ui_repeat_every_day">ทุกวัน</string>
+    <string name="ui_repeat_weekdays">วันทำงาน</string>
+    <string name="ui_repeat_weekends">เสาร์–อาทิตย์</string>
+    <!-- %1$s = ชื่อวันเต็ม: "ทุกวันจันทร์" -->
+    <string name="ui_repeat_every_weekday">ทุก%1$s</string>
+    <!-- %1$s = ชื่อวันเต็มของวันที่เว้นไว้: "ทุกวัน ยกเว้นวันอาทิตย์" -->
+    <string name="ui_repeat_every_day_except">ทุกวัน ยกเว้น%1$s</string>
+    <!-- ปลุกตามรอบเข้ากะ: "ทำ 4 หยุด 2 เริ่ม 25 พ.ย." -->
+    <string name="ui_repeat_rotation">ทำ %1$d หยุด %2$d เริ่ม %3$s</string>
+    <!-- รอบแบบกำหนดเอง: "ปลุก 3 จาก 7 วัน วนซ้ำตั้งแต่ 25 พ.ย." -->
+    <string name="ui_repeat_rotation_custom">ปลุก %1$d จาก %2$d วัน วนซ้ำตั้งแต่ %3$s</string>
+    <string name="ui_repeat_no_days">ไม่มีวันที่ปลุก</string>
+    <string name="ui_repeat_no_dates">ยังไม่ได้เลือกวันที่</string>
+    <string name="ui_repeat_no_upcoming_dates">ไม่มีวันที่จะปลุกแล้ว</string>
+    <plurals name="ui_repeat_dates_more">
+        <item quantity="other">%1$s และอีก %2$d วัน</item>
+    </plurals>
+
+    <!-- ตัวเลือกเวลาและระยะเวลา -->
+    <string name="ui_done">เสร็จสิ้น</string>
+    <string name="ui_time_picker_title">ตั้งเวลา</string>
+    <string name="ui_time_picker_hour">ชั่วโมง</string>
+    <string name="ui_time_picker_minute">นาที</string>
+    <string name="ui_time_picker_am_pm">ก่อนหรือหลังเที่ยง</string>
+    <string name="ui_time_picker_use_keyboard">พิมพ์เวลา</string>
+    <string name="ui_time_picker_use_wheel">เลือกจากวงล้อ</string>
+    <string name="ui_time_picker_invalid_hour">ใส่ชั่วโมงระหว่าง %1$s ถึง %2$s</string>
+    <string name="ui_time_picker_invalid_minute">ใส่นาทีระหว่าง %1$s ถึง %2$s</string>
+    <string name="ui_unit_hours_label">ชม.</string>
+    <string name="ui_unit_minutes_label">นาที</string>
+    <string name="ui_unit_seconds_label">วินาที</string>
+    <string name="ui_duration_picker_hours">ชั่วโมง</string>
+    <string name="ui_duration_picker_minutes">นาที</string>
+    <string name="ui_duration_picker_seconds">วินาที</string>
+    <string name="ui_keypad_delete">ลบ</string>
+    <string name="ui_keypad_clear">ล้าง</string>
+    <string name="ui_keypad_display">ระยะเวลา %1$s</string>
+    <string name="ui_date_picker_title">เลือกวันที่</string>
+    <string name="ui_date_picker_no_selection">ยังไม่ได้เลือกวันที่</string>
+
+    <!-- สิทธิ์ -->
+    <string name="ui_permission_allow">อนุญาต</string>
+    <string name="ui_permission_continue">ดำเนินการต่อ</string>
+    <string name="ui_permission_not_now">ไว้ทีหลัง</string>
+    <string name="ui_permission_open_settings">เปิดการตั้งค่า</string>
+    <string name="ui_permission_needed_title">ต้องได้รับอนุญาต</string>
+    <string name="ui_permission_settings_title">อนุญาตในการตั้งค่า</string>
+    <string name="ui_permission_settings_message">สิทธิ์นี้ถูกปิดไว้สำหรับนาฬิกาปลุก เปิดการตั้งค่าแอป ไปที่ \"สิทธิ์\" แล้วเลือกอนุญาต</string>
+    <string name="ui_notifications_off_title">การแจ้งเตือนปิดอยู่</string>
+    <string name="ui_notifications_off_body">เปิดการแจ้งเตือนไว้ เพื่อให้การปลุกแสดงบนหน้าจอล็อกได้ และคุณจะเห็นตัวจับเวลา การปลุกที่กำลังจะมาถึง และคำเตือนเมื่อพลาดการปลุก</string>
+    <string name="ui_notifications_turn_on">เปิด</string>
+
+    <!-- การปลุกครั้งถัดไป -->
+    <string name="ui_next_alarm">ปลุกครั้งถัดไป</string>
+    <string name="ui_next_nap">งีบหลับ</string>
+    <string name="ui_next_calendar">ปลุกตามปฏิทิน</string>
+    <string name="ui_next_location">ปลุกตามสถานที่</string>
+    <string name="ui_next_test">ทดสอบการปลุก</string>
+    <string name="ui_next_timer">ตัวจับเวลา</string>
+    <!-- %1$s = "อีก 7 ชม. 23 นาที" -->
+    <string name="ui_rings_in">จะดังใน%1$s</string>
+    <string name="ui_no_alarms_title">ไม่มีการปลุกที่เปิดอยู่</string>
+    <string name="ui_no_alarms_body">เปิดการปลุกไว้ แล้วจะเห็นที่นี่ว่าจะดังครั้งถัดไปเมื่อไร</string>
+
+    <!-- ทั่วไป -->
+    <string name="ui_settings">การตั้งค่า</string>
+    <string name="ui_loading">กำลังโหลด…</string>
+    <string name="ui_error_title">เกิดข้อผิดพลาด</string>
+    <string name="ui_error_generic">โปรดลองอีกครั้ง หากยังเกิดขึ้นอีก ให้ปิดแล้วเปิดแอปใหม่</string>
+    <string name="ui_retry">ลองอีกครั้ง</string>
+</resources>

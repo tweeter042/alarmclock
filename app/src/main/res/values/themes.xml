@@ -1,8 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!--
+        Window theme behind the Compose UI (light; values-night has the dark twin). The window
+        background matches the default theme's page colour so nothing flashes before the first
+        frame; once the UI runs, AlarmClockAppRoot repaints the window in the user's theme colour.
+    -->
     <style name="Theme.AlarmClock" parent="android:Theme.Material.Light.NoActionBar">
-        <item name="android:statusBarColor">@android:color/transparent</item>
-        <item name="android:navigationBarColor">@android:color/transparent</item>
-        <item name="android:windowBackground">@android:color/white</item>
+        <item name="android:windowBackground">@color/app_window_background</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightNavigationBar">true</item>
+    </style>
+
+    <!-- Launch theme of MainActivity (core-splashscreen); the icon sits on the launcher icon's background colour. -->
+    <style name="Theme.AlarmClock.Splash" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/app_splash_background</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_launcher_foreground</item>
+        <item name="postSplashScreenTheme">@style/Theme.AlarmClock</item>
     </style>
 </resources>

@@ -70,6 +70,15 @@ android {
             excludes += setOf("/META-INF/{AL2.0,LGPL2.1}", "/META-INF/INDEX.LIST", "/META-INF/DEPENDENCIES")
         }
     }
+
+    testOptions {
+        unitTests.all {
+            // Roborazzi without its Gradle plugin: always record, PNGs go to build/screenshots-out/.
+            it.systemProperty("roborazzi.test.record", "true")
+            it.systemProperty("robolectric.pixelCopyRenderMode", "hardware")
+            it.maxHeapSize = "3g"
+        }
+    }
 }
 
 dependencies {
@@ -98,6 +107,7 @@ dependencies {
 
     testImplementation(libs.junit)
     testImplementation(libs.kotlinx.coroutines.test)
+    testImplementation(libs.turbine)
     testImplementation(libs.robolectric)
     testImplementation(libs.androidx.test.core)
     testImplementation(libs.androidx.test.ext.junit)

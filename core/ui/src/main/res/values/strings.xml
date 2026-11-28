@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Language tag of this resource set. AppLocales reads it to learn which language the UI
+         is really shown in. Thai resources use "th". Not a user-visible string. -->
+    <string name="ui_language_tag">en</string>
+
+    <!-- Date patterns (java.time DateTimeFormatter syntax, quote literal text with ').
+         Year letters (y) are replaced by the displayed year, Buddhist era when chosen. -->
+    <string name="ui_pattern_date_short">EEE, d MMM</string>
+    <string name="ui_pattern_date_short_year">EEE, d MMM y</string>
+    <string name="ui_pattern_day_month">d MMM</string>
+    <string name="ui_pattern_day_month_year">d MMM y</string>
+    <string name="ui_pattern_date_long">EEEE, d MMMM y</string>
+    <string name="ui_pattern_date_long_no_year">EEEE, d MMMM</string>
+    <string name="ui_pattern_month_year">MMMM y</string>
+
+    <!-- Time: %1$s = "7:30", %2$s = AM/PM -->
+    <string name="ui_time_with_am_pm">%1$s %2$s</string>
+    <!-- %1$s = "Tomorrow" / "Wednesday" / "Wed, 25 Nov", %2$s = "7:30 AM" -->
+    <string name="ui_day_at_time">%1$s at %2$s</string>
+    <string name="ui_today">Today</string>
+    <string name="ui_tomorrow">Tomorrow</string>
+    <string name="ui_yesterday">Yesterday</string>
+
+    <!-- Short day names, ISO order (1 = Monday) -->
+    <string name="ui_day_short_1">Mon</string>
+    <string name="ui_day_short_2">Tue</string>
+    <string name="ui_day_short_3">Wed</string>
+    <string name="ui_day_short_4">Thu</string>
+    <string name="ui_day_short_5">Fri</string>
+    <string name="ui_day_short_6">Sat</string>
+    <string name="ui_day_short_7">Sun</string>
+    <!-- Separator between listed items ("Mon, Wed, Fri") -->
+    <string name="ui_list_separator">", "</string>
+
+    <!-- Durations, short units ("7 h 23 min") -->
+    <plurals name="ui_unit_days_short">
+        <item quantity="one">%1$d day</item>
+        <item quantity="other">%1$d days</item>
+    </plurals>
+    <plurals name="ui_unit_hours_short">
+        <item quantity="one">%1$d h</item>
+        <item quantity="other">%1$d h</item>
+    </plurals>
+    <plurals name="ui_unit_minutes_short">
+        <item quantity="one">%1$d min</item>
+        <item quantity="other">%1$d min</item>
+    </plurals>
+    <plurals name="ui_unit_seconds_short">
+        <item quantity="one">%1$d s</item>
+        <item quantity="other">%1$d s</item>
+    </plurals>
+    <!-- Durations, long units (screen readers: "7 hours and 23 minutes") -->
+    <plurals name="ui_unit_days_long">
+        <item quantity="one">%1$d day</item>
+        <item quantity="other">%1$d days</item>
+    </plurals>
+    <plurals name="ui_unit_hours_long">
+        <item quantity="one">%1$d hour</item>
+        <item quantity="other">%1$d hours</item>
+    </plurals>
+    <plurals name="ui_unit_minutes_long">
+        <item quantity="one">%1$d minute</item>
+        <item quantity="other">%1$d minutes</item>
+    </plurals>
+    <plurals name="ui_unit_seconds_long">
+        <item quantity="one">%1$d second</item>
+        <item quantity="other">%1$d seconds</item>
+    </plurals>
+    <!-- Joins the parts of a long duration: "1 hour, 5 minutes and 30 seconds" -->
+    <string name="ui_duration_join">", "</string>
+    <string name="ui_duration_join_last">" and "</string>
+    <string name="ui_duration_less_than_minute">less than a minute</string>
+    <!-- %1$s = "7 h 23 min" -->
+    <string name="ui_relative_in">in %1$s</string>
+    <string name="ui_relative_ago">%1$s ago</string>
+    <string name="ui_relative_in_less_than_minute">in less than a minute</string>
+    <string name="ui_relative_just_now">just now</string>
+
+    <!-- Repeat summaries -->
+    <string name="ui_repeat_once">Once</string>
+    <string name="ui_repeat_every_day">Every day</string>
+    <string name="ui_repeat_weekdays">Weekdays</string>
+    <string name="ui_repeat_weekends">Weekends</string>
+    <!-- %1$s = full day name: "Every Monday" -->
+    <string name="ui_repeat_every_weekday">Every %1$s</string>
+    <!-- %1$s = full day name of the one day left out: "Every day except Sunday" -->
+    <string name="ui_repeat_every_day_except">Every day except %1$s</string>
+    <!-- Shift rotation: "4 on / 2 off from 25 Nov" -->
+    <!-- "on" / "off" do not change with the count, so this is not a plural. -->
+    <string name="ui_repeat_rotation" tools:ignore="PluralsCandidate">%1$d on / %2$d off from %3$s</string>
+    <!-- Irregular rotation: "3 of 7 days, repeating from 25 Nov" -->
+    <!-- %2$d is always 2 or more (a cycle of one day is "Every day" or "No ring days"). -->
+    <string name="ui_repeat_rotation_custom" tools:ignore="PluralsCandidate">%1$d of %2$d days, repeating from %3$s</string>
+    <string name="ui_repeat_no_days">No ring days</string>
+    <string name="ui_repeat_no_dates">No dates chosen</string>
+    <string name="ui_repeat_no_upcoming_dates">No upcoming dates</string>
+    <!-- %1$s = first dates ("25 Nov, 2 Dec"), %2$d = how many more -->
+    <plurals name="ui_repeat_dates_more">
+        <item quantity="one">%1$s and %2$d more</item>
+        <item quantity="other">%1$s and %2$d more</item>
+    </plurals>
+
+    <!-- Pickers -->
+    <string name="ui_done">Done</string>
+    <string name="ui_time_picker_title">Set time</string>
+    <string name="ui_time_picker_hour">Hour</string>
+    <string name="ui_time_picker_minute">Minute</string>
+    <string name="ui_time_picker_am_pm">AM or PM</string>
+    <string name="ui_time_picker_use_keyboard">Type the time</string>
+    <string name="ui_time_picker_use_wheel">Choose on the wheel</string>
+    <!-- %1$s / %2$s = lowest / highest allowed value -->
+    <string name="ui_time_picker_invalid_hour">Enter an hour from %1$s to %2$s</string>
+    <string name="ui_time_picker_invalid_minute">Enter minutes from %1$s to %2$s</string>
+    <string name="ui_unit_hours_label">h</string>
+    <string name="ui_unit_minutes_label">min</string>
+    <string name="ui_unit_seconds_label">s</string>
+    <string name="ui_duration_picker_hours">Hours</string>
+    <string name="ui_duration_picker_minutes">Minutes</string>
+    <string name="ui_duration_picker_seconds">Seconds</string>
+    <string name="ui_keypad_delete">Delete</string>
+    <string name="ui_keypad_clear">Clear</string>
+    <string name="ui_keypad_display">Duration %1$s</string>
+    <string name="ui_date_picker_title">Choose a date</string>
+    <string name="ui_date_picker_no_selection">No date chosen</string>
+
+    <!-- Permissions -->
+    <string name="ui_permission_allow">Allow</string>
+    <string name="ui_permission_continue">Continue</string>
+    <string name="ui_permission_not_now">Not now</string>
+    <string name="ui_permission_open_settings">Open settings</string>
+    <string name="ui_permission_needed_title">Permission needed</string>
+    <string name="ui_permission_settings_title">Allow it in Settings</string>
+    <string name="ui_permission_settings_message">This permission is turned off for Alarm Clock. Open the app settings, go to Permissions and allow it.</string>
+    <string name="ui_notifications_off_title">Notifications are off</string>
+    <string name="ui_notifications_off_body">Turn them on so alarms can appear on the lock screen and you can see timers, upcoming alarms and missed-alarm warnings.</string>
+    <string name="ui_notifications_turn_on">Turn on</string>
+
+    <!-- Next alarm -->
+    <string name="ui_next_alarm">Next alarm</string>
+    <string name="ui_next_nap">Nap</string>
+    <string name="ui_next_calendar">Calendar alarm</string>
+    <string name="ui_next_location">Location alarm</string>
+    <string name="ui_next_test">Test alarm</string>
+    <string name="ui_next_timer">Timer</string>
+    <!-- %1$s = "in 7 h 23 min" -->
+    <string name="ui_rings_in">Rings %1$s</string>
+    <string name="ui_no_alarms_title">No alarms on</string>
+    <string name="ui_no_alarms_body">Turn on an alarm to see here when it rings next.</string>
+
+    <!-- Common -->
+    <string name="ui_settings">Settings</string>
+    <string name="ui_loading">Loading…</string>
+    <string name="ui_error_title">Something went wrong</string>
+    <string name="ui_error_generic">Please try again. If it keeps happening, restart the app.</string>
+    <string name="ui_retry">Try again</string>
+</resources>

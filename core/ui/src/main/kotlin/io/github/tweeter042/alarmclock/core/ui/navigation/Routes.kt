@@ -41,6 +41,12 @@ import kotlinx.serialization.Serializable
 @Serializable data object AboutRoute
 @Serializable data object ChangelogRoute
 @Serializable data object LicensesRoute
+/**
+ * First-run onboarding. It is the start destination while `settings.onboardingCompleted` is
+ * false. To finish onboarding, set `onboardingCompleted = true`: the app shell then makes
+ * [AlarmsRoute] the start destination and resets the back stack to it (navigating there yourself
+ * as well is harmless).
+ */
 @Serializable data object OnboardingRoute
 
 // [feature:integrations]
@@ -63,7 +69,11 @@ import kotlinx.serialization.Serializable
 @Serializable data class MissionPreviewRoute(val missionJson: String)
 @Serializable data object HandwritingModelsRoute
 
-/** Bottom-bar destinations, in order. */
+/**
+ * Bottom-bar destinations, in order. The app shell shows the bottom bar only on these; switch
+ * between them with `navController.navigateToTopLevel(route)`. Each of these screens shows
+ * `TopLevelActions(navController)` (the Settings gear) in its top bar.
+ */
 object TopLevelRoutes {
     val all: List<Any> = listOf(AlarmsRoute, WorldClockRoute, TimerRoute, StopwatchRoute, SleepRoute)
 }
