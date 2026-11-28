@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="docs/icon.png" width="256" height="256" alt="Alarm Clock icon: a cream alarm clock with gold bells whose dial shows a sunrise">
+</p>
+
 # Alarm Clock
 
 A full-featured Android alarm clock for Samsung Galaxy phones (built for the Galaxy S24 Ultra on
