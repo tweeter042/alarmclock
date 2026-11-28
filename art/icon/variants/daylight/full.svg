@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="108" height="108" viewBox="0 0 108 108">
+  <!-- Alarm Clock "Sunrise" (daylight) - background + foreground composited (unmasked 108x108) -->
+  <defs>
+    <linearGradient id="bgL" gradientUnits="userSpaceOnUse" x1="54" y1="0" x2="54" y2="108">
+      <stop offset="0" stop-color="#CDE2FA"/>
+      <stop offset="1" stop-color="#FBE2CC"/>
+    </linearGradient>
+    <radialGradient id="bgG" gradientUnits="userSpaceOnUse" cx="54" cy="100" r="58">
+      <stop offset="0" stop-color="#FFC59A" stop-opacity="0.5"/>
+      <stop offset="0.55" stop-color="#FFC59A" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#FFC59A" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="fShadow" gradientUnits="userSpaceOnUse" cx="54" cy="58.4" r="30.7">
+      <stop offset="0" stop-color="#22406E" stop-opacity="0.3"/>
+      <stop offset="0.772" stop-color="#22406E" stop-opacity="0.252"/>
+      <stop offset="0.8697" stop-color="#22406E" stop-opacity="0.108"/>
+      <stop offset="1" stop-color="#22406E" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="fFoot" gradientUnits="userSpaceOnUse" x1="0" y1="75" x2="0" y2="85">
+      <stop offset="0" stop-color="#3A4E74"/>
+      <stop offset="1" stop-color="#1B2742"/>
+    </linearGradient>
+    <linearGradient id="fBell" gradientUnits="userSpaceOnUse" x1="0" y1="18.6" x2="0" y2="38.6">
+      <stop offset="0" stop-color="#FF9C7A"/>
+      <stop offset="1" stop-color="#E5512D"/>
+    </linearGradient>
+    <linearGradient id="fBellL" gradientUnits="userSpaceOnUse" x1="30.74" y1="37.07" x2="43.97" y2="31.91">
+      <stop offset="0" stop-color="#FF9C7A"/>
+      <stop offset="1" stop-color="#E5512D"/>
+    </linearGradient>
+    <linearGradient id="fBellR" gradientUnits="userSpaceOnUse" x1="66.54" y1="28.7" x2="74.75" y2="40.29">
+      <stop offset="0" stop-color="#FF9C7A"/>
+      <stop offset="1" stop-color="#E5512D"/>
+    </linearGradient>
+    <linearGradient id="fRimL" gradientUnits="userSpaceOnUse" x1="32.71" y1="40.08" x2="43.9" y2="31.33">
+      <stop offset="0" stop-color="#FFB79A"/>
+      <stop offset="1" stop-color="#B93A1C"/>
+    </linearGradient>
+    <linearGradient id="fRimR" gradientUnits="userSpaceOnUse" x1="64.1" y1="31.33" x2="75.29" y2="40.08">
+      <stop offset="0" stop-color="#FFB79A"/>
+      <stop offset="1" stop-color="#B93A1C"/>
+    </linearGradient>
+    <linearGradient id="fBezel" gradientUnits="userSpaceOnUse" x1="41.4" y1="30.6" x2="66.6" y2="81">
+      <stop offset="0" stop-color="#3A4E74"/>
+      <stop offset="1" stop-color="#1B2742"/>
+    </linearGradient>
+    <linearGradient id="fSky" gradientUnits="userSpaceOnUse" x1="54" y1="34.1" x2="54" y2="77.5">
+      <stop offset="0" stop-color="#86BDF0"/>
+      <stop offset="0.236" stop-color="#B7DAF8"/>
+      <stop offset="0.3894" stop-color="#E9E7F0"/>
+      <stop offset="0.4956" stop-color="#FFD9B6"/>
+      <stop offset="0.59" stop-color="#FFBF86"/>
+      <stop offset="0.59" stop-color="#A3C8EF"/>
+      <stop offset="0.7335" stop-color="#7FADE2"/>
+      <stop offset="1" stop-color="#5687CB"/>
+    </linearGradient>
+    <radialGradient id="fGlow" gradientUnits="userSpaceOnUse" cx="54" cy="59.71" r="24.96">
+      <stop offset="0" stop-color="#FFF7DA" stop-opacity="0.95"/>
+      <stop offset="0.18" stop-color="#FFE3A2" stop-opacity="0.7"/>
+      <stop offset="0.4" stop-color="#FFC68C" stop-opacity="0.35"/>
+      <stop offset="0.7" stop-color="#FFB2A2" stop-opacity="0.1"/>
+      <stop offset="1" stop-color="#FFB2A2" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="fSun" gradientUnits="userSpaceOnUse" cx="54" cy="57.43" r="10.48">
+      <stop offset="0" stop-color="#FFFDF2"/>
+      <stop offset="0.55" stop-color="#FFE07A"/>
+      <stop offset="1" stop-color="#FFB646"/>
+    </radialGradient>
+    <linearGradient id="fSea" gradientUnits="userSpaceOnUse" x1="54" y1="59.71" x2="54" y2="77.5">
+      <stop offset="0" stop-color="#A3C8EF"/>
+      <stop offset="0.35" stop-color="#7FADE2"/>
+      <stop offset="1" stop-color="#5687CB"/>
+    </linearGradient>
+    <radialGradient id="fSeaGlow" gradientUnits="userSpaceOnUse" cx="54" cy="59.71" r="13.45">
+      <stop offset="0" stop-color="#FFD49A" stop-opacity="0.5"/>
+      <stop offset="0.45" stop-color="#FFD49A" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#FFD49A" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="fGlint" gradientUnits="userSpaceOnUse" x1="38.05" y1="59.71" x2="69.95" y2="59.71">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#FFFFFF" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="fVig" gradientUnits="userSpaceOnUse" cx="54" cy="55.8" r="21.7">
+      <stop offset="0" stop-color="#2E5288" stop-opacity="0"/>
+      <stop offset="0.86" stop-color="#2E5288" stop-opacity="0"/>
+      <stop offset="1" stop-color="#2E5288" stop-opacity="0.2"/>
+    </radialGradient>
+    <linearGradient id="fStep" gradientUnits="userSpaceOnUse" x1="54" y1="34.1" x2="54" y2="77.5">
+      <stop offset="0" stop-color="#4F6489"/>
+      <stop offset="1" stop-color="#34466A"/>
+    </linearGradient>
+    <radialGradient id="fJewel" gradientUnits="userSpaceOnUse" cx="53.7" cy="55.45" r="1.25">
+      <stop offset="0" stop-color="#FFB39A"/>
+      <stop offset="0.5" stop-color="#F0683F"/>
+      <stop offset="1" stop-color="#C9401E"/>
+    </radialGradient>
+  </defs>
+  <g>
+    <path d="M0 0H108V108H0Z" fill="url(#bgL)"/>
+    <path d="M-4 100A58 58 0 1 0 112 100A58 58 0 1 0 -4 100Z" fill="url(#bgG)"/>
+  </g>
+  <g>
+    <path d="M23.3 58.4A30.7 30.7 0 1 0 84.7 58.4A30.7 30.7 0 1 0 23.3 58.4Z" fill="url(#fShadow)"/>
+    <path d="M38.91 72.04L35.6 76.84A1.55 1.55 0 0 0 38.04 78.74L41.9 74.37A1.9 1.9 0 1 0 38.91 72.04Z" fill="url(#fFoot)"/>
+    <path d="M66.1 74.37L69.96 78.74A1.55 1.55 0 0 0 72.4 76.84L69.09 72.04A1.9 1.9 0 1 0 66.1 74.37Z" fill="url(#fFoot)"/>
+    <path d="M41.05 37.11L39.26 34.83A1.3 1.3 0 0 0 37.21 36.43L39 38.71A1.3 1.3 0 1 0 41.05 37.11Z" fill="url(#fBell)"/>
+    <path d="M33.25 40.29A6.8 7.14 -38 0 1 43.97 31.91Z" fill="url(#fBellL)"/>
+    <path d="M32.77 30.04A1.1 1.1 0 1 0 34.97 30.04A1.1 1.1 0 1 0 32.77 30.04Z" fill="url(#fBell)"/>
+    <path d="M69 38.71L70.79 36.43A1.3 1.3 0 0 0 68.74 34.83L66.95 37.11A1.3 1.3 0 1 0 69 38.71Z" fill="url(#fBell)"/>
+    <path d="M64.03 31.91A6.8 7.14 38 0 1 74.75 40.29Z" fill="url(#fBellR)"/>
+    <path d="M73.03 30.04A1.1 1.1 0 1 0 75.23 30.04A1.1 1.1 0 1 0 73.03 30.04Z" fill="url(#fBell)"/>
+    <path d="M33.09 40.57L44.28 31.82A0.62 0.62 0 0 0 43.51 30.85L32.32 39.59A0.62 0.62 0 1 0 33.09 40.57Z" fill="url(#fRimL)"/>
+    <path d="M63.72 31.82L74.91 40.57A0.62 0.62 0 0 0 75.68 39.59L64.49 30.85A0.62 0.62 0 1 0 63.72 31.82Z" fill="url(#fRimR)"/>
+    <path d="M28.8 55.8A25.2 25.2 0 1 0 79.2 55.8A25.2 25.2 0 1 0 28.8 55.8Z" fill="url(#fBezel)"/>
+    <path d="M31.95 55.8A22.05 22.05 0 1 0 76.05 55.8A22.05 22.05 0 1 0 31.95 55.8Z" fill="url(#fSky)"/>
+    <path d="M31.95 55.8A22.05 22.05 0 1 0 76.05 55.8A22.05 22.05 0 1 0 31.95 55.8Z" fill="url(#fGlow)"/>
+    <path d="M44.89 59.71A9.11 9.11 0 1 0 63.11 59.71A9.11 9.11 0 1 0 44.89 59.71Z" fill="url(#fSun)"/>
+    <path d="M32.3 59.71L75.7 59.71A22.05 22.05 0 0 1 32.3 59.71Z" fill="url(#fSea)"/>
+    <path d="M32.3 59.71L75.7 59.71A22.05 22.05 0 0 1 32.3 59.71Z" fill="url(#fSeaGlow)"/>
+    <path d="M38.05 60.33L69.95 60.33A0.31 0.31 0 0 0 69.95 59.71L38.05 59.71A0.31 0.31 0 1 0 38.05 60.33Z" fill="url(#fGlint)"/>
+    <path d="M32.3 55.8A21.7 21.7 0 1 0 75.7 55.8A21.7 21.7 0 1 0 32.3 55.8Z" fill="url(#fVig)"/>
+    <path d="M31.55 55.8A22.45 22.45 0 1 1 76.45 55.8A22.45 22.45 0 1 1 31.55 55.8ZM32.3 55.8A21.7 21.7 0 1 0 75.7 55.8A21.7 21.7 0 1 0 32.3 55.8Z" fill="url(#fStep)"/>
+    <path d="M70.87 55.8A0.92 0.92 0 1 0 72.71 55.8A0.92 0.92 0 1 0 70.87 55.8Z" fill="#1C2944" fill-opacity="0.85"/>
+    <path d="M35.29 55.8A0.92 0.92 0 1 0 37.13 55.8A0.92 0.92 0 1 0 35.29 55.8Z" fill="#1C2944" fill-opacity="0.85"/>
+    <path d="M52.72 55.65L47.67 65.29A1.6 1.6 0 0 0 50.44 66.89L56.27 57.7A2.05 2.05 0 1 0 52.72 55.65Z" fill="#22406E" fill-opacity="0.2"/>
+    <path d="M56.1 56.79L55.65 39.86A1.2 1.2 0 0 0 53.25 39.86L52.8 56.79A1.65 1.65 0 1 0 56.1 56.79Z" fill="#22406E" fill-opacity="0.2"/>
+    <path d="M51.75 56.75A2.7 2.7 0 1 0 57.15 56.75A2.7 2.7 0 1 0 51.75 56.75Z" fill="#22406E" fill-opacity="0.2"/>
+    <path d="M52.44 54.81L47.39 64.45A1.4 1.4 0 0 0 49.82 65.85L55.64 56.66A1.85 1.85 0 1 0 52.44 54.81Z" fill="#1C2944"/>
+    <path d="M55.45 55.84L55 38.9A1 1 0 0 0 53 38.9L52.55 55.84A1.45 1.45 0 1 0 55.45 55.84Z" fill="#1C2944"/>
+    <path d="M51.5 55.8A2.5 2.5 0 1 0 56.5 55.8A2.5 2.5 0 1 0 51.5 55.8Z" fill="#1C2944"/>
+    <path d="M53 55.8A1 1 0 1 0 55 55.8A1 1 0 1 0 53 55.8Z" fill="url(#fJewel)"/>
+    <path d="M53.32 55.44A0.34 0.34 0 1 0 54 55.44A0.34 0.34 0 1 0 53.32 55.44Z" fill="#FFFFFF" fill-opacity="0.9"/>
+  </g>
+</svg>
