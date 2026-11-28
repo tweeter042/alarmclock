@@ -51,7 +51,7 @@
         <item quantity="other">ดังอยู่ %d นาทีโดยไม่มีใครตอบ</item>
     </plurals>
     <string name="engine_restored_title">ตั้งปลุกให้ใหม่แล้ว</string>
-    <string name="engine_restored_text">Android ลบการปลุกของแอปนี้ไป เช่น หลังกด “บังคับหยุด” ตอนนี้ตั้งให้ใหม่เรียบร้อยแล้ว เปิด “ตรวจความพร้อม” เพื่อป้องกันไม่ให้เกิดขึ้นอีก</string>
+    <string name="engine_restored_text">Android ลบการปลุกของแอปนี้ไป เช่น หลังกด “บังคับหยุด” ตอนนี้ตั้งให้ใหม่เรียบร้อยแล้ว เข้าไปตรวจสถานะในการตั้งค่าของแอปเพื่อป้องกันไม่ให้เกิดขึ้นอีก</string>
 
     <!-- Alarm guard -->
     <string name="engine_guard_title">ตัวป้องกันการปลุกทำงานอยู่</string>

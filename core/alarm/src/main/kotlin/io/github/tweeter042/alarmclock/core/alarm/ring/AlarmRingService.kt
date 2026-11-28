@@ -131,20 +131,31 @@ class AlarmRingService : Service() {
 
     // --- foreground -----------------------------------------------------------------------------
 
+    /** startForegroundService() requires startForeground() within seconds, whatever else fails. */
     private fun goForeground(payload: TriggerPayload?, preRingId: String?) {
         val engine = engine
         if (engine == null) {
-            // Must still go foreground: startForegroundService() requires it.
             startForegroundSafely(NotificationIds.ring("unavailable"), fallbackNotification(payload, preRingId))
             return
         }
-        val sounding = engine.ringBook.value.sounding
-        if (sounding != null) {
-            showRing(sounding, force = true)
-        } else {
-            val settings = engine.settingsSnapshot()
-            notificationKey = null
-            startForegroundSafely(NotificationIds.ring(preRingId ?: "starting"), engine.notifier.starting(payload, preRingId, settings))
+        try {
+            val sounding = engine.ringBook.value.sounding
+            val briefing = engine.briefingRequest.value
+            when {
+                sounding != null -> showRing(sounding, force = true)
+                briefing != null && payload == null -> {
+                    notificationKey = null
+                    startForegroundSafely(NotificationIds.BRIEFING, engine.notifier.briefing(engine.settingsSnapshot()))
+                }
+                else -> {
+                    notificationKey = null
+                    val notification = engine.notifier.starting(payload, preRingId, engine.settingsSnapshot())
+                    startForegroundSafely(NotificationIds.ring(preRingId ?: "starting"), notification)
+                }
+            }
+        } catch (t: Throwable) {
+            log.e("Ring notification could not be built; using the fallback notification", t)
+            startForegroundSafely(NotificationIds.ring(preRingId ?: "starting"), fallbackNotification(payload, preRingId))
         }
     }
 
@@ -187,7 +198,13 @@ class AlarmRingService : Service() {
         val key = listOf(ring.ringId, ring.state, ring.currentMissionIndex, ring.awakePromptShowing, ring.snoozeCount, watchSilent, generation)
         if (!force && key == notificationKey) return
         notificationKey = key
-        startForegroundSafely(NotificationIds.ring(ring.ringId, generation), engine.notifier.ring(ring, engine.settingsSnapshot(), watchSilent))
+        val notification = try {
+            engine.notifier.ring(ring, engine.settingsSnapshot(), watchSilent)
+        } catch (t: Throwable) {
+            log.e("Ring notification could not be built; using the fallback notification", t)
+            fallbackNotification(null, ring.ringId)
+        }
+        startForegroundSafely(NotificationIds.ring(ring.ringId, generation), notification)
     }
 
     // --- ring state -----------------------------------------------------------------------------

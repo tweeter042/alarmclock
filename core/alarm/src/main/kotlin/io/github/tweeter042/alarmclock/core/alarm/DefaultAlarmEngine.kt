@@ -171,6 +171,10 @@ class DefaultAlarmEngine internal constructor(
         step("watchdog") { Watchdog.enqueueIfUnlocked(appContext) }
         observeSources()
         schedule.startDebouncer()
+        step("integrity check") {
+            val report = schedule.integrityReport(repair = true)
+            if (report.repaired) log.w("Start-up integrity check repaired the schedule")
+        }
     }
 
     private suspend fun <T> step(name: String, block: suspend () -> T): T? = try {
@@ -345,11 +349,13 @@ class DefaultAlarmEngine internal constructor(
     }
 
     override suspend fun nextOccurrenceOf(alarmId: Long): Long? {
+        start()
         val alarm = data.alarms.getAlarm(alarmId) ?: return null
         return schedule.upcomingOccurrence(alarm)
     }
 
     override suspend fun skipNext(alarmId: Long) {
+        start()
         val alarm = data.alarms.getAlarm(alarmId) ?: return
         val occurrence = schedule.upcomingOccurrence(alarm.copy(skippedOccurrenceAt = null)) ?: return
         data.alarms.update(alarmId) { it.copy(skippedOccurrenceAt = occurrence) }
@@ -357,6 +363,7 @@ class DefaultAlarmEngine internal constructor(
     }
 
     override suspend fun clearSkip(alarmId: Long) {
+        start()
         data.alarms.update(alarmId) { it.copy(skippedOccurrenceAt = null) }
         schedule.request("clear skip")
     }
@@ -365,6 +372,7 @@ class DefaultAlarmEngine internal constructor(
 
     /** "Dismiss now" on the upcoming notification; ignored if the alarm's next occurrence changed meanwhile. */
     internal suspend fun dismissUpcoming(alarmId: Long, expectedOccurrence: Long?) {
+        start()
         val alarm = data.alarms.getAlarm(alarmId) ?: return
         val occurrence = schedule.upcomingOccurrence(alarm) ?: return
         notifier.cancelPreAlarmNotices(alarmId)
@@ -386,6 +394,7 @@ class DefaultAlarmEngine internal constructor(
     }
 
     override suspend fun startNap(minutes: Int, template: Alarm?): Long {
+        start()
         val triggerAt = clock.now() + minutes.coerceIn(1, MAX_NAP_MINUTES) * 60_000L
         val local = Instant.ofEpochMilli(triggerAt).atZone(clock.zone())
         val base = template ?: env.settings().alarmDefaults
@@ -415,6 +424,7 @@ class DefaultAlarmEngine internal constructor(
     }
 
     override suspend fun testRing(alarm: Alarm, delaySeconds: Int) {
+        start()
         val triggerAt = clock.now() + delaySeconds.coerceIn(0, MAX_TEST_DELAY_SECONDS) * 1_000L
         schedule.registerOne(
             PlannedTrigger(
@@ -430,31 +440,40 @@ class DefaultAlarmEngine internal constructor(
         )
     }
 
-    override suspend fun snooze(ringId: String): Boolean = rings.dispatch(RingInput.Snooze(ringId))?.accepted == true
+    override suspend fun snooze(ringId: String): Boolean {
+        start()
+        return rings.dispatch(RingInput.Snooze(ringId))?.accepted == true
+    }
 
     override suspend fun dismiss(ringId: String, outcome: RingOutcome) {
+        start()
         rings.dispatch(RingInput.Dismiss(ringId, outcome))
     }
 
     override suspend fun startMission(ringId: String) {
+        start()
         rings.dispatch(RingInput.StartMission(ringId))
     }
 
     override fun onMissionInteraction(ringId: String) = rings.onMissionInteraction(ringId)
 
     override suspend fun completeMission(ringId: String) {
+        start()
         rings.dispatch(RingInput.CompleteMission(ringId))
     }
 
     override suspend fun abandonMission(ringId: String) {
+        start()
         rings.dispatch(RingInput.AbandonMission(ringId))
     }
 
     override suspend fun confirmAwake(ringId: String) {
+        start()
         rings.dispatch(RingInput.ConfirmAwake(ringId))
     }
 
     override suspend fun scheduleTimer(timerId: Long, endAt: Long) {
+        start()
         schedule.registerOne(
             PlannedTrigger(
                 identity = TriggerIdentities.timer(timerId),
@@ -468,6 +487,7 @@ class DefaultAlarmEngine internal constructor(
     }
 
     override suspend fun cancelTimer(timerId: Long) {
+        start()
         schedule.cancelIdentities(setOf(TriggerIdentities.timer(timerId)))
         rings.cancelTimerRings(timerId)
     }
@@ -477,6 +497,7 @@ class DefaultAlarmEngine internal constructor(
      * hours away, the ring takes over that occurrence: the regular trigger does not ring again.
      */
     override suspend fun triggerNow(kind: RingKind, sourceId: Long, alarm: Alarm) {
+        start()
         val now = clock.now()
         val occurrence = when (kind) {
             RingKind.ALARM -> schedule.upcomingOccurrence(data.alarms.getAlarm(sourceId) ?: alarm, now)

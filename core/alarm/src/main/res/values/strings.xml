@@ -52,7 +52,7 @@
         <item quantity="other">It rang for %d minutes without a response.</item>
     </plurals>
     <string name="engine_restored_title">Alarms set again</string>
-    <string name="engine_restored_text">Android had removed this app\'s alarms, for example after Force stop. They are set again. Open Health check to keep this from happening.</string>
+    <string name="engine_restored_text">Android had removed this app\'s alarms, for example after Force stop. They are set again. Check the app\'s health check in Settings to keep this from happening.</string>
 
     <!-- Alarm guard -->
     <string name="engine_guard_title">Alarm guard active</string>
