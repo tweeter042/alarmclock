@@ -1,4 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Alarm Clock</string>
+
+    <!-- Bottom navigation -->
+    <string name="app_nav_alarms">Alarms</string>
+    <string name="app_nav_world_clock">World clock</string>
+    <string name="app_nav_timer">Timer</string>
+    <string name="app_nav_stopwatch">Stopwatch</string>
+    <string name="app_nav_sleep">Sleep</string>
+
+    <!-- What's new (shown once after an update). %1$s = version name, e.g. "1.1.0" -->
+    <string name="app_whats_new_title">What\'s new in %1$s</string>
+    <!-- %1$s = release date, e.g. "27 Nov 2026" -->
+    <string name="app_whats_new_released">Released %1$s</string>
+    <string name="app_whats_new_see_all">See all changes</string>
+    <string name="app_whats_new_got_it">Got it</string>
+    <!-- %1$s = name of the AI model used to build the app (from the build configuration) -->
+    <string name="app_ai_disclaimer">This app was developed with the assistance of AI (model: %1$s).</string>
+    <string name="app_ai_model_not_specified">not specified</string>
 </resources>

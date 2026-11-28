@@ -1,4 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">นาฬิกาปลุก</string>
+
+    <!-- แถบนำทางด้านล่าง -->
+    <string name="app_nav_alarms">ปลุก</string>
+    <string name="app_nav_world_clock">นาฬิกาโลก</string>
+    <string name="app_nav_timer">ตัวจับเวลา</string>
+    <string name="app_nav_stopwatch">นาฬิกาจับเวลา</string>
+    <string name="app_nav_sleep">การนอน</string>
+
+    <!-- มีอะไรใหม่ (แสดงครั้งเดียวหลังอัปเดต) %1$s = เวอร์ชัน เช่น "1.1.0" -->
+    <string name="app_whats_new_title">มีอะไรใหม่ในเวอร์ชัน %1$s</string>
+    <!-- %1$s = วันที่เผยแพร่ เช่น "27 พ.ย. 2569" -->
+    <string name="app_whats_new_released">เผยแพร่เมื่อ %1$s</string>
+    <string name="app_whats_new_see_all">ดูการเปลี่ยนแปลงทั้งหมด</string>
+    <string name="app_whats_new_got_it">เข้าใจแล้ว</string>
+    <!-- %1$s = ชื่อโมเดล AI ที่ใช้พัฒนาแอป (จากการตั้งค่าตอน build) -->
+    <string name="app_ai_disclaimer">แอปนี้พัฒนาโดยใช้ AI ช่วย (โมเดล: %1$s)</string>
+    <string name="app_ai_model_not_specified">ไม่ได้ระบุ</string>
 </resources>
