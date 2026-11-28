@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Notification channels -->
+    <string name="engine_channel_alarms_name">นาฬิกาปลุกที่กำลังดัง</string>
+    <string name="engine_channel_alarms_desc">แสดงหน้าจอปลุกแบบเต็มจอขณะนาฬิกาดัง รวมถึงบนหน้าจอล็อก</string>
+    <string name="engine_channel_upcoming_name">การปลุกที่ใกล้ถึง</string>
+    <string name="engine_channel_upcoming_desc">เตือนก่อนนาฬิกาปลุกดังไม่นาน พร้อมปุ่มปิดปลุกล่วงหน้า</string>
+    <string name="engine_channel_snoozed_name">การปลุกที่เลื่อนไว้</string>
+    <string name="engine_channel_snoozed_desc">แสดงเวลาที่การปลุกที่เลื่อนไว้จะดังอีกครั้ง</string>
+    <string name="engine_channel_missed_name">การปลุกที่พลาดหรือหยุดไป</string>
+    <string name="engine_channel_missed_desc">แจ้งเมื่อนาฬิกาปลุกไม่ได้ดัง หยุดเองอัตโนมัติ หรือต้องตั้งใหม่</string>
+    <string name="engine_channel_guard_name">ตัวป้องกันการปลุก</string>
+    <string name="engine_channel_guard_desc">การแจ้งเตือนถาวรของตัวป้องกันเสริมที่ช่วยให้นาฬิกาปลุกทำงานได้แน่นอน</string>
+    <string name="engine_channel_timers_name">ตัวจับเวลาที่หมดเวลา</string>
+    <string name="engine_channel_timers_desc">แสดงเมื่อตัวจับเวลานับถึงศูนย์</string>
+    <string name="engine_channel_awake_name">ตรวจว่าตื่นแล้ว</string>
+    <string name="engine_channel_awake_desc">ถามว่าคุณตื่นจริงหรือยัง หลังปิดนาฬิกาปลุกไปไม่กี่นาที</string>
+    <string name="engine_channel_sunrise_name">แสงอรุณ</string>
+    <string name="engine_channel_sunrise_desc">ค่อย ๆ เพิ่มความสว่างหน้าจอก่อนถึงเวลาปลุกแบบแสงอรุณ</string>
+
+    <!-- Ringing notification -->
+    <string name="engine_ring_title_alarm">นาฬิกาปลุก</string>
+    <string name="engine_ring_title_timer">ตัวจับเวลา</string>
+    <string name="engine_ring_title_nap">งีบหลับ</string>
+    <string name="engine_ring_title_test">ทดสอบนาฬิกาปลุก</string>
+    <string name="engine_ring_title_calendar">ปลุกตามปฏิทิน</string>
+    <string name="engine_ring_title_location">ปลุกตามสถานที่</string>
+    <string name="engine_ring_text_time">กำลังดัง · %1$s</string>
+    <string name="engine_ring_text_timer">หมดเวลาแล้ว</string>
+    <string name="engine_ring_text_mission">ทำภารกิจให้สำเร็จเพื่อปิดปลุก</string>
+    <string name="engine_ring_text_watch">กำลังปลุกที่นาฬิกาข้อมือ</string>
+    <string name="engine_action_snooze">เลื่อนปลุก</string>
+    <string name="engine_action_dismiss">ปิดปลุก</string>
+    <string name="engine_action_add_minute">+1 นาที</string>
+    <string name="engine_action_stop">หยุด</string>
+
+    <!-- Snoozed -->
+    <string name="engine_snoozed_title">เลื่อนปลุกไปถึง %1$s</string>
+
+    <!-- Upcoming alarm -->
+    <string name="engine_upcoming_title">ปลุกครั้งถัดไป %1$s</string>
+    <string name="engine_upcoming_title_label">ปลุกครั้งถัดไป %1$s · %2$s</string>
+    <string name="engine_upcoming_text">ตื่นแล้วใช่ไหม ปิดได้เลยด้วยปุ่ม “ปิดปลุกเลย”</string>
+    <string name="engine_action_dismiss_now">ปิดปลุกเลย</string>
+
+    <!-- Missed / stopped / restored -->
+    <string name="engine_missed_title">พลาดการปลุกเวลา %1$s</string>
+    <string name="engine_missed_text">ตอนถึงเวลาปลุก โทรศัพท์ปิดอยู่หรือกำลังรีสตาร์ต</string>
+    <string name="engine_auto_stopped_title">นาฬิกาปลุกหยุดเองอัตโนมัติ</string>
+    <plurals name="engine_auto_stopped_text">
+        <item quantity="other">ดังอยู่ %d นาทีโดยไม่มีใครตอบ</item>
+    </plurals>
+    <string name="engine_restored_title">ตั้งปลุกให้ใหม่แล้ว</string>
+    <string name="engine_restored_text">Android ลบการปลุกของแอปนี้ไป เช่น หลังกด “บังคับหยุด” ตอนนี้ตั้งให้ใหม่เรียบร้อยแล้ว เข้าไปตรวจสถานะในการตั้งค่าของแอปเพื่อป้องกันไม่ให้เกิดขึ้นอีก</string>
+
+    <!-- Alarm guard -->
+    <string name="engine_guard_title">ตัวป้องกันการปลุกทำงานอยู่</string>
+    <string name="engine_guard_text_next">ปลุกครั้งถัดไป %1$s</string>
+    <string name="engine_guard_text_none">ยังไม่ได้ตั้งปลุก</string>
+
+    <!-- Awake check -->
+    <string name="engine_awake_title">ตื่นแล้วหรือยัง</string>
+    <string name="engine_awake_text">กดยืนยันว่าตื่นแล้ว ไม่อย่างนั้นนาฬิกาจะปลุกอีกรอบ</string>
+    <string name="engine_action_awake">ตื่นแล้ว</string>
+
+    <!-- Sunrise -->
+    <string name="engine_sunrise_title">แสงอรุณเริ่มแล้ว</string>
+    <string name="engine_sunrise_text">นาฬิกาจะปลุกเวลา %1$s</string>
+
+    <!-- Morning briefing read after dismissing -->
+    <string name="engine_briefing_title">สรุปยามเช้า</string>
+    <string name="engine_briefing_text">กำลังอ่านสรุปยามเช้า…</string>
+</resources>
